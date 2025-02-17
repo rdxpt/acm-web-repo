@@ -1,1 +1,0 @@
-stack your graphics in this folder only.
