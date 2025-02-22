@@ -6,7 +6,7 @@ import Team from "./components/Team";
 
 export default function Home() {
   return (
-    <div className="bg-[#1B1B23]">
+    <div>
       <Element
         name="home"
         className="h-screen flex items-center justify-center bg-slate-500"

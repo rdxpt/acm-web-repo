@@ -1,104 +1,69 @@
 import Image from "next/image";
 import TeamGrid from "./TeamGrid";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const sprayImages = ["/img1.jpg", "/img2.jpg", "/img3.jpg", "/img4.jpg", "/img5.jpg", "/img6.jpg", "/img7.jpg"];
+const teamData = [
+  { name: "Team Alpha", members: ["/member1.png", "/member2.png", "/member3.png"] },
+  { name: "Team Beta", members: ["/member4.png", "/member5.png", "/member6.png"] },
+  { name: "Team Gamma", members: ["/member7.png", "/member8.png", "/member9.png"] },
+];
 
-export const Team = () => {
-  const [sprayedImages, setSprayedImages] = useState([]);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const newImage = {
-        id: Date.now(),
-        x: e.pageX, // 🔥 Use `pageX` for exact position
-        y: e.pageY, // 🔥 Use `pageY` to prevent offset issues
-        src: sprayImages[Math.floor(Math.random() * sprayImages.length)],
-      };
-
-      setSprayedImages((prev) => {
-        const newTrail = [...prev, newImage];
-        return newTrail.length > 10 ? newTrail.slice(-10) : newTrail; // Keep max 10 images
-      });
-
-      setTimeout(() => {
-        setSprayedImages((prev) => prev.filter((img) => img.id !== newImage.id));
-      }, 500);
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-    return () => document.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+export const team = () => {
+  const [selectedTeam, setSelectedTeam] = useState(teamData[0]);
 
   return (
-    <div className="relative w-full max-w-[1440px] h-[2048px] mx-auto flex flex-col overflow-hidden">
-      {/* Office Section */}
+    <div className="w-full max-w-[1440px] h-[2048px] border-none mx-auto flex flex-col">
+      {/* Office Section - Divided into 4 Equal Rows */}
       <div className="h-1/2 flex">
-        <div className="w-1/4 flex items-center justify-center">
-          <h1
-            className="text-transparent text-[128px] font-[900] tracking-widest text-center -rotate-90 italic"
-            style={{
-              fontFamily: "Inter, sans-serif",
-              WebkitTextStroke: "2px #F6F2E6",
-            }}
-          >
-            OFFICE <br /> BEARERS
-          </h1>
-        </div>
-        <div className="flex-1 flex items-center justify-center">
-          <h1 className="text-xl">Office Column 2</h1>
-        </div>
-        <div className="flex-1 flex items-center justify-center">
-          <h1 className="text-xl">Office Column 3</h1>
-        </div>
-        <div className="flex-1 flex items-center justify-center">
-          <h1 className="text-xl">Office Column 4</h1>
-        </div>
+      <div className="w-1/4 border border-none flex items-center justify-center">
+        <h1
+          className="text-transparent text-[128px] font-  [900] tracking-widest text-center -rotate-90 italic"
+          style={{
+          fontFamily: "Inter, sans-serif", // Apply Inter font directly
+          WebkitTextStroke: "2px #F6F2E6", // Creates the outlined text effect
+          }}
+        >
+          OFFICE <br /> BEARERS
+        </h1>
       </div>
-
-      {/* Team Section */}
-      <div id="team-section" className="relative flex-1 flex">
-        {/* Teams Grid */}
-        <div className="w-3/4 flex items-center justify-center">
+    <div className="flex-1 flex items-center justify-center bg-none border-none">
+      <h1 className="text-xl">Office Column 2</h1>
+    </div>
+    <div className="flex-1 flex items-center justify-center bg-none border-none">
+      <h1 className="text-xl">Office Column 3</h1>
+    </div>
+    <div className="flex-1 flex items-center justify-center bg-none border-none">
+      <h1 className="text-xl">Office Column 4</h1>
+    </div>
+  </div>
+  
+      {/* Team Section - 3:1 Ratio */}
+      <div className="flex-1 flex">
+        {/* Large 3/4 Section - Teams Grid */}
+        <div className="w-3/4 border border-none flex items-center justify-center">
           <TeamGrid />
         </div>
-
-        {/* Team Members Title */}
-        <div className="w-1/4 flex items-center justify-center">
+  
+        {/* Small 1/4 Section - Placeholder */}
+        <div className="w-1/4 border border-none flex items-center justify-center">
           <h1
             className="text-transparent text-[128px] font-[900] tracking-widest text-center rotate-90 italic"
             style={{
-              fontFamily: "Inter, sans-serif",
-              WebkitTextStroke: "2px #F6F2E6",
+            fontFamily: "Inter, sans-serif", // Apply Inter font directly
+            WebkitTextStroke: "2px #F6F2E6", // Creates the outlined text effect
             }}
           >
             TEAM <br /> MEMBERS
           </h1>
         </div>
       </div>
-
-      {/* Spray Images */}
-      {sprayedImages.map((img) => (
-        <Image
-          key={img.id}
-          src={img.src}
-          alt="Sprayed Image"
-          width={40}
-          height={40}
-          className="pointer-events-none transition-opacity duration-500"
-          style={{
-            position: "fixed", // 🔥 Prevents scrolling misalignment
-            top: `${img.y}px`,
-            left: `${img.x}px`,
-            opacity: 0.8, // Higher visibility
-            zIndex: 50, // Ensures it appears above everything
-            borderRadius: "50%", // Makes the images circular
-            transition: "opacity 0.5s ease-out",
-          }}
-        />
-      ))}
     </div>
   );
-};
+  
+  
+  
+  
+  
+}
 
-export default Team;
+export default team;
