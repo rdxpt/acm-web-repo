@@ -2,20 +2,28 @@
 import { Element } from "react-scroll";
 import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
-import Team from "./components/Team";
+
+import Team from "./components/team";
+import Hero from "./components/hero";
+import About from "./components/About";
+
 
 export default function Home() {
   return (
     <div>
       <Element
         name="home"
-        className="h-screen flex items-center justify-center bg-slate-500"
-      ></Element>
+        className="h-screen flex items-center justify-center"
+      >
+        <Hero />
+      </Element>
 
       <Element
         name="about"
-        className="h-screen flex items-center justify-center bg-red-400"
-      ></Element>
+        className=" flex items-center justify-center"
+      >
+        <About />
+      </Element>
 
       <Element
         name="gallery"
