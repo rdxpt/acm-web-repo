@@ -62,7 +62,7 @@ const Events = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gray-900"
+      className="relative"
       style={{ height: sectionHeight }}
     >
       <div ref={containerRef} className="h-screen overflow-hidden">
@@ -110,18 +110,21 @@ const Events = () => {
                   >
                     {isHeader ? (
                       <>
-                        <div className="bg-[#74BEFF] text-white px-4 py-2 rounded-md text-7xl font-bold mb-2">
+                        <div
+                          className="bg-[#74BEFF] text-white px-4 py-2 rounded-md text-3xl
+                        md:text-7xl font-bold mb-2"
+                        >
                           {item.title}
                         </div>
                         <div className="h-4 w-[2px] bg-white" />
                       </>
                     ) : (
                       <>
-                        <div className="flex flex-col items-center space-y-2 mb-1">
-                          <span className="text-white text-7xl font-bold">
+                        <div className="flex flex-col items-center space-y-0.5 md:space-y-2 mb-1">
+                          <span className="text-white text-3xl md:text-7xl font-bold">
                             {item.title}
                           </span>
-                          <span className="text-gray-300 text-4xl">
+                          <span className="text-gray-300 text-xl md:text-4xl">
                             {item.date}
                           </span>
                         </div>
@@ -136,11 +139,11 @@ const Events = () => {
                   >
                     <div className="h-4 w-[2px] bg-white mb-2" />
 
-                    <div className="flex flex-col items-center space-y-2">
-                      <span className="text-white text-7xl font-bold">
+                    <div className="flex flex-col items-center space-y-0.5 md:space-y-2">
+                      <span className="text-white text-3xl md:text-7xl font-bold">
                         {item.title}
                       </span>
-                      <span className="text-gray-300 text-4xl">
+                      <span className="text-gray-300 text-xl md:text-4xl">
                         {item.date}
                       </span>
                     </div>

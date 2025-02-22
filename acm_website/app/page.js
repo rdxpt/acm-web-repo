@@ -2,7 +2,7 @@
 import { Element } from "react-scroll";
 import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
-import Team from "./components/Team";
+import Team from "./components/team";
 
 export default function Home() {
   return (
@@ -19,18 +19,18 @@ export default function Home() {
 
       <Element
         name="gallery"
-        className="h-screen flex items-center justify-center bg-gray-400"
+        className="h-screen flex items-center justify-center "
       >
         <Carousel />
       </Element>
 
-      <Team />
 
       {/* Do not add h-screen here */}
-      <Element name="events" className="bg-black-400">
+      <Element name="events" className="">
         <Event />
       </Element>
 
+      <Team />
       <Element
         name="contact"
         className="h-screen flex items-center justify-center bg-green-400"
