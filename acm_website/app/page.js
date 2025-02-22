@@ -2,7 +2,7 @@
 import { Element } from "react-scroll";
 import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
-import Team from "./components/team";
+import Team from "./components/Team";
 
 export default function Home() {
   return (
