@@ -19,11 +19,10 @@ export default function Home() {
 
       <Element
         name="gallery"
-        className="h-screen flex items-center justify-center "
+        className="h-64 md:h-screen flex items-center justify-center"
       >
         <Carousel />
       </Element>
-
 
       {/* Do not add h-screen here */}
       <Element name="events" className="">
