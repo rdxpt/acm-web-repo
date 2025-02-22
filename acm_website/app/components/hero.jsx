@@ -4,30 +4,25 @@ import { useState, useEffect, useRef } from "react";
 const Hero = () => {
   const words = ["Innovation", "Learning", "Networking", "Computing Machinery"];
 
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(true);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const heroRef = useRef(null);
-
-  const typingSpeedRef = useRef(100);
-  const deletingSpeedRef = useRef(50);
-  const pauseDurationRef = useRef(700); // 2 seconds pause after typing
-  const currentWordRef = useRef(words[0]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setIsAnimating(true);
-          setCurrentWordIndex(0);
           setDisplayedText("");
+          setWordIndex(0);
           setIsDeleting(false);
-          setIsPaused(false);
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
         }
       },
-      { threshold: 0.9 }
+      { threshold: 0.75 }
     );
 
     if (heroRef.current) {
@@ -42,56 +37,48 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    if (!isAnimating || isPaused) return;
+    if (!isVisible) return;
 
-    currentWordRef.current = words[currentWordIndex];
-    const currentWord = currentWordRef.current;
-    const isLastWord = currentWordIndex === words.length - 1;
+    let timeout;
+    const currentWord = words[wordIndex];
+    const isLastWord = wordIndex === words.length - 1;
 
-    const tick = () => {
-      setDisplayedText((current) => {
-        if (!isDeleting) {
-          // Typing
-          if (current.length < currentWord.length) {
-            return currentWord.slice(0, current.length + 1);
-          }
-          // Word is fully typed
+    const type = () => {
+      // For typing
+      if (!isDeleting) {
+        if (displayedText === currentWord) {
+          // Word is complete - wait before deleting
           if (!isLastWord) {
-            // Pause before starting to delete
-            setIsPaused(true);
-            setTimeout(() => {
-              setIsPaused(false);
+            timeout = setTimeout(() => {
               setIsDeleting(true);
-            }, pauseDurationRef.current);
-          } else {
-            setIsAnimating(false); // Stop at last word
+            }, 700);
+            return;
           }
-          return current;
-        } else {
-          // Deleting
-          if (current.length > 0) {
-            return current.slice(0, -1);
-          } else {
-            setIsDeleting(false);
-            setCurrentWordIndex((prev) => {
-              if (prev < words.length - 1) {
-                return prev + 1;
-              }
-              return prev;
-            });
-            return current;
-          }
+          return; // Stop at last word
         }
-      });
+
+        timeout = setTimeout(() => {
+          setDisplayedText(currentWord.slice(0, displayedText.length + 1));
+        }, 100);
+        return;
+      }
+
+      // For deleting
+      if (displayedText === "") {
+        setIsDeleting(false);
+        setWordIndex((i) => i + 1);
+        return;
+      }
+
+      timeout = setTimeout(() => {
+        setDisplayedText(displayedText.slice(0, -1));
+      }, 50);
     };
 
-    const speed = isDeleting
-      ? deletingSpeedRef.current
-      : typingSpeedRef.current;
-    const timeoutId = setTimeout(tick, speed);
+    type();
 
-    return () => clearTimeout(timeoutId);
-  }, [isAnimating, isDeleting, currentWordIndex, words, isPaused]);
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, wordIndex, words, isVisible]);
 
   return (
     <>
