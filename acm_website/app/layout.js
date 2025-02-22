@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Nanum_Pen_Script } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "./components/navbar";
+import { carousel } from "./components/carousel"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
