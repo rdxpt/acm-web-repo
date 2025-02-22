@@ -66,4 +66,4 @@ export const team = () => {
   
 }
 
-export default Team;
+export default team;
