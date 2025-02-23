@@ -7,7 +7,6 @@ import Team from "./components/Team";
 import Hero from "./components/hero";
 import About from "./components/About";
 
-
 export default function Home() {
   return (
     <div>
@@ -18,10 +17,7 @@ export default function Home() {
         <Hero />
       </Element>
 
-      <Element
-        name="about"
-        className=" flex items-center justify-center"
-      >
+      <Element name="about" className=" flex items-center justify-center">
         <About />
       </Element>
 
@@ -37,12 +33,12 @@ export default function Home() {
         <Event />
       </Element>
 
-      <Team />
-      <Element
-        name="contact"
-      >
-        <Footer/>
+      <Element name="team" className="">
+        {/* <Team /> */}
+      </Element>
 
+      <Element name="contact">
+        <Footer />
       </Element>
     </div>
   );

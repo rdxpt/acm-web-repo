@@ -38,7 +38,6 @@ export const NavBar = () => {
         <span className="sr-only">Menu</span>
       </button>
 
-      
       <nav>
         <ul
           id="primary-navigation"
@@ -55,8 +54,25 @@ export const NavBar = () => {
               offset={-70}
               duration={500}
             >
-              <span aria-hidden="true" className="md:hidden">00</span>
+              <span aria-hidden="true" className="md:hidden">
+                00
+              </span>
               About
+            </Link>
+          </li>
+          <li className="active cursor-pointer px-2 py-1">
+            <Link
+              activeClass="active"
+              to="gallery"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <span aria-hidden="true" className="md:hidden">
+                01
+              </span>
+              Gallery
             </Link>
           </li>
 
@@ -69,7 +85,9 @@ export const NavBar = () => {
               offset={-70}
               duration={500}
             >
-              <span aria-hidden="true" className="md:hidden">01</span>
+              <span aria-hidden="true" className="md:hidden">
+                02
+              </span>
               Team
             </Link>
           </li>
@@ -83,7 +101,9 @@ export const NavBar = () => {
               offset={-70}
               duration={500}
             >
-              <span aria-hidden="true" className="sm:hidden">02</span>
+              <span aria-hidden="true" className="sm:hidden">
+                03
+              </span>
               Contact
             </Link>
           </li>
