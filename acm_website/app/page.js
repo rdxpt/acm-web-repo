@@ -2,7 +2,7 @@
 import { Element } from "react-scroll";
 import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
-
+import Footer from "./components/Footer";
 import Team from "./components/Team";
 import Hero from "./components/hero";
 import About from "./components/About";
@@ -40,8 +40,10 @@ export default function Home() {
       <Team />
       <Element
         name="contact"
-        className="h-screen flex items-center justify-center bg-green-400"
-      ></Element>
+      >
+        <Footer/>
+
+      </Element>
     </div>
   );
 }
