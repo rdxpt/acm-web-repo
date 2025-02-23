@@ -98,26 +98,27 @@ const Hero = () => {
         }
       `}</style>
 
-      <div ref={heroRef} className="relative w-full h-screen overflow-hidden">
-        <div className="relative h-full flex items-center justify-between px-16 max-w-7xl mx-auto">
-          <div className="flex flex-col space-y-4">
-            <h1 className="text-gray-200 text-6xl font-bold">
+      <div ref={heroRef} className=" w-full h-screen overflow-hidden">
+        <div className="flex h-full px-16 max-w-1/2 ">
+          <div className="flex flex-col items-start justify-center ml-[10%] space-y-[0.3vw] ">
+            <h1 className="text-gray-200 text-[3.6vw] font-bold">
               Association for
             </h1>
-            <div className="bg-[#8097FF] bg-opacity-45 backdrop-blur-sm px-6 py-3 w-[37vw] rounded-lg">
-              <h2 className="text-white text-5xl py-1 font-bold">
+            <div className="bg-[#8097FF] bg-opacity-45 backdrop-blur-sm w-[35vw] pl-[0.8vw] py-[0.4vw] rounded-lg">
+              <h2 className="text-white text-[3vw] py-1 font-bold">
                 <span className="cursor">{displayedText}</span>
               </h2>
             </div>
           </div>
 
-          <div className="relative w-[30rem] h-[30rem]">
+          <div className="relative flex items-center justify-center w-1/2 h-full">
             <Image
               src="/acm_icon.svg"
               alt="ACM Logo"
-              fill
-              className="object-contain"
-              priority
+              width={65}
+              height={65}
+              className=" w-3/4 h-3/4"
+              
             />
           </div>
         </div>
