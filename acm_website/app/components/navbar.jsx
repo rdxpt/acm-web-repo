@@ -11,7 +11,7 @@ export const NavBar = () => {
   };
 
   return (
-    <header className="flex justify-between w-full bg-[#28242c] backdrop-blur-sm fixed top-0 z-50 h-16 p-2 xl:px-6 items-center">
+    <header className="flex justify-between max-md:w-screen w-full bg-[#28242c] backdrop-blur-sm fixed top-0 z-50 h-16 p-2 xl:px-6 items-center">
       <div className="flex items-center space-x-2">
         <Image src="/acm_icon.svg" height={50} width={50} alt="ACM Icon" />
         <div className="flex items-center space-x-2">

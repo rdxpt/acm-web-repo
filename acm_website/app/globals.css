@@ -129,7 +129,6 @@ header{
   margin-inline-end : .5em;
 }
 
-
 @media (max-width: 40rem ) {
   .primary-navigation {
     gap : var(--gap,1rem);
@@ -163,8 +162,17 @@ header{
     z-index : 9999;
     border : 0;
   }
-
-  
-  
 }
 
+/* Footer */
+.footer-bg{
+  background: linear-gradient(
+  to bottom,
+  #937688 0%,
+  #5557C2 19%,
+  #1E183A 100%
+);
+}
+
+
+/* ------ */
