@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
           <div className="absolute right-0 top-[7rem] w-[34%] h-[38%] bg-gradient-to-tr from-[#290A76] via-[#1F42E3] to-[#FF99E3] blur-[100px] rounded-full"></div>
         </div>
         {children}
+        
       </body>
     </html>
   );
