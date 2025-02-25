@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { teamMembers } from "../data/teamData.js";
 
-export const TeamS = () => {
+export const Team = () => {
     const [selectedTeam, setSelectedTeam] = useState(teamMembers[0]);
 
     return (
@@ -79,4 +79,4 @@ function ProfileImage({ id, img, socials }) {
     );
 }
 
-export default TeamS;
+export default Team;

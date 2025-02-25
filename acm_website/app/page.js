@@ -4,7 +4,7 @@ import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
 import Footer from "./components/Footer";
 import Office from "./components/Office";
-import TeamS from "./components/TeamS";
+import TeamS from "./components/Team";
 import Hero from "./components/hero";
 import About from "./components/About";
 
@@ -39,7 +39,7 @@ export default function Home() {
       </Element>
 
       <Element name="TeamS" className="">
-        <TeamS />
+        <Team />
       </Element>
 
       <Element name="contact">
