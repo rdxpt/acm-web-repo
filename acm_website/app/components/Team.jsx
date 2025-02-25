@@ -54,7 +54,7 @@ export const Team = () => {
 
 function ProfileImage({ id, img, socials }) {
     return (
-        <div className="relative group w-full h-full overflow-hidden rounded-[28px]">
+        <div className="relative group w-full h-32 overflow-hidden rounded-[28px]">
             {/* Team Member Image */}
             <Image
                 src={img}
