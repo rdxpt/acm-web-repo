@@ -82,12 +82,12 @@ export const officeBearers = [
       email : "https://mail.com/",
       github : "https://github.com/"
     },
-  },
+  }
 ];
 
 export const clubMentors = [
   {
-    id: 7,
+    id: 100,
     name: "Dr. Arvinder Kaur",
     photo: "/os/os7.png",
     designation: "Dean, USAR",
@@ -101,7 +101,7 @@ export const clubMentors = [
     },
   },
   {
-    id: 8,
+    id: 101,
     name: "Dr. Rahul Johari",
     photo: "/os/os7.png",
     designation: "Club Mentor",

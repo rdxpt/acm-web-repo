@@ -3,7 +3,8 @@ import { Element } from "react-scroll";
 import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
 import Footer from "./components/Footer";
-import Team from "./components/Team";
+import Office from "./components/Office";
+import TeamS from "./components/TeamS";
 import Hero from "./components/hero";
 import About from "./components/About";
 
@@ -33,8 +34,12 @@ export default function Home() {
         <Event />
       </Element>
 
-      <Element name="team" className="">
-        <Team />
+      <Element name="office" className="">
+        <Office />
+      </Element>
+
+      <Element name="TeamS" className="">
+        <TeamS />
       </Element>
 
       <Element name="contact">
