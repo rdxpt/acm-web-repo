@@ -112,7 +112,7 @@ export default function Carousel() {
           />
         </motion.div>
       </div>
-      <div className="mt-6 text-black text-sm md:text-lg p-1 px-4 font-medium rounded-full bg-[#D9D9D9]">
+      <div className="mt-6 text-white text-sm md:text-lg">
         {currentIndex + 1}/{items.length}
       </div>
     </div>
