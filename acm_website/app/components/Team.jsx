@@ -26,7 +26,7 @@ export const Team = () => {
                 <div className="w-full md:w-[900px] h-auto md:h-[640px] bg-[#f6f2e6]/20 rounded-[28px] 
                         p-4 md:p-8 gap-4 md:gap-8 flex flex-col md:flex-row-reverse">
                     {/* Team Names Grid */}
-                    <div className="w-full md:w-1/4 grid gap-4 grid-cols-4 md:grid-cols-1 md:grid-rows-4">
+                    <div className="w-full md:w-1/4 grid gap-4 grid-cols-5 md:grid-cols-1 md:grid-rows-4">
                         {teamMembers.map((team, index) => (
                             <div
                                 key={index}
@@ -60,9 +60,8 @@ function ProfileImage({ id, img, socials }) {
                 src={img}
                 alt={`Team Member ${id}`}
                 fill
-                className="object-cover transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-sm"
+                className="object-cover object-center transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-sm"
             />
-
             {/* Social Icons Overlay */}
             <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a href={socials.github} target="_blank" className="hover:scale-110 transition-transform">
