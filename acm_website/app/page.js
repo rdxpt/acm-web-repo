@@ -34,7 +34,7 @@ export default function Home() {
       </Element>
 
       <Element name="team" className="">
-        {/* <Team /> */}
+        <Team />
       </Element>
 
       <Element name="contact">
