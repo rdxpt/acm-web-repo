@@ -4,7 +4,7 @@ import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
 import Footer from "./components/Footer";
 import Office from "./components/Office";
-import TeamS from "./components/Team";
+import Team from "./components/Team";
 import Hero from "./components/hero";
 import About from "./components/About";
 
