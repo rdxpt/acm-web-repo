@@ -3,10 +3,10 @@ import { Element } from "react-scroll";
 import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
 import Footer from "./components/Footer";
+import Office from "./components/Office";
 import Team from "./components/Team";
 import Hero from "./components/hero";
 import About from "./components/About";
-
 
 export default function Home() {
   return (
@@ -18,10 +18,7 @@ export default function Home() {
         <Hero />
       </Element>
 
-      <Element
-        name="about"
-        className=" flex items-center justify-center"
-      >
+      <Element name="about" className=" flex items-center justify-center">
         <About />
       </Element>
 
@@ -37,12 +34,16 @@ export default function Home() {
         <Event />
       </Element>
 
-      <Team />
-      <Element
-        name="contact"
-      >
-        <Footer/>
+      <Element name="office" className="">
+        <Office />
+      </Element>
 
+      <Element name="TeamS" className="">
+        <Team />
+      </Element>
+
+      <Element name="contact">
+        <Footer />
       </Element>
     </div>
   );
