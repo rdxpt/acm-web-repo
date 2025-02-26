@@ -5,18 +5,7 @@ const KonamiCode = () => {
   const [activated, setActivated] = useState(false);
 
   useEffect(() => {
-    const konamiCode = [
-      "ArrowUp",
-      "ArrowUp",
-      "ArrowDown",
-      "ArrowDown",
-      "ArrowLeft",
-      "ArrowRight",
-      "ArrowLeft",
-      "ArrowRight",
-      "b",
-      "a",
-    ];
+    const konamiCode = ["f", "a", "r", "t"];
     let index = 0;
 
     const checkKonamiCode = (event) => {
@@ -36,11 +25,7 @@ const KonamiCode = () => {
     return () => window.removeEventListener("keydown", checkKonamiCode);
   }, []);
 
-  return (
-    <div>
-      {activated}
-    </div>
-  );
+  return <div>{activated}</div>;
 };
 
 export default KonamiCode;
