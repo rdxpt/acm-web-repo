@@ -7,4 +7,8 @@ const nextConfig = {
   };
   
   export default nextConfig;
+
+export const images = {
+    unoptimized: true,
+};
   
