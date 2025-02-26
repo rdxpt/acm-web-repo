@@ -57,21 +57,21 @@ export const teamMembers = [
           }
         },
         {
-          img: "ts/ts/107.jpg",
+          img: "/ts/107.jpg",
           id:107,
           socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
-            github: "https://github.com/member1"
+            instagram: "https://www.instagram.com/sethi_gaurika03?igsh=MXFrdHBjYW84eG54Yw==",
+            linkedin: "https://www.linkedin.com/in/gaurika-sethi-53043b321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            github: "https://github.com/Gaurikasethi"
           }
         },
         {
           img: "/ts/108.jpg",
           id:108,
           socials: {
-            instagram: "https://instagram.com/member2",
-            linkedin: "https://linkedin.com/in/member2",
-            github: "https://github.com/member2"
+            instagram: "https://www.instagram.com/prince_11038/",
+            linkedin: "https://www.linkedin.com/in/prince11038/",
+            github: "https://github.com/Prince11038"
           }
         },
         {
@@ -180,8 +180,8 @@ export const teamMembers = [
           img: "/ts/401.jpg",
           id:401,
           socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
+            instagram: "https://www.instagram.com/aryan3mishra?igsh=ZWt0MXZ6d2xxYXll&utm_source=qr",
+            linkedin: "https://www.linkedin.com/in/aryan-mishra-745ab1270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
             github: "https://github.com/member1"
           }
         },
@@ -303,18 +303,17 @@ export const teamMembers = [
           img: "/ts/505.jpg",
           id:505,
           socials: {
-            instagram: "https://instagram.com/member2",
-            linkedin: "https://linkedin.com/in/member2",
-            github: "https://github.com/member2"
+            instagram: "https://www.instagram.com/pavitrjain14?igsh=MWRhNHp1NGk0ZjQ2cg==",
+            linkedin: "https://www.linkedin.com/in/pavitr-jain-921264279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           }
         },
         {
           img: "/ts/506.jpg",
           id:506,
           socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
+            instagram: "",
+            linkedin: "https://www.linkedin.com/in/shikhar-khare-3b8780310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            github: ""
           }
         },
         {

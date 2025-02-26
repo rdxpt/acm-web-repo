@@ -25,7 +25,7 @@ const Footer = () => {
   // Social Media Links and Icons
   const socialMedia = [
     { name: "call", url: "tel:+123456789" },
-    { name: "mail", url: "mailto:usaracm@ipu.ac.in" },
+    { name: "mail", url: "mailto:contact@usar.acm.org" },
     { name: "linkedin", url: "https://www.linkedin.com/company/ggsipu-usar-acm-student-chapter/" },
     { name: "insta", url: "https://www.instagram.com/usaracm" },
     { name: "x", url: "https://twitter.com/acm_usar" },

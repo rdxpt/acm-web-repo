@@ -10,7 +10,7 @@ export const Office = () => {
             {/* Col 1: Office Bearers Title */}
             <div className="flex items-center justify-center col-span-2 md:col-span-1">
                 <h1
-                    className="text-transparent text-[48px] sm:text-[64px] md:text-[80px] lg:text-[98px] font-[900] tracking-widest text-center gentle-pulse rotate-0 md:-rotate-90 italic"
+                    className="text-transparent text-[48px] sm:text-[64px] md:text-[80px] lg:text-[98px] font-[900] tracking-widest hover:glitch-text text-[#1b1b23] text-center gentle-pulse rotate-0 md:-rotate-90 italic"
                     style={{
                         fontFamily: "Inter, sans-serif",
                         WebkitTextStroke: "2px #F6F2E6",
@@ -35,7 +35,7 @@ export const Office = () => {
                                 width={0}
                                 height={0}
                                 sizes="(max-width: 640px) 20vw, (max-width: 1024px) 15vw, 10vw"
-                                className={`rounded-full mx-auto border border-[#F2F2E6] object-cover object-top w-24 h-24 md:w-[11vw] md:h-[11vw] max-w-[128px] max-h-[128px] 
+                                className={`rounded-full mx-auto border border-[#F2F2E6] object-cover object-top w-24 h-24 md:w-[11vw] md:h-[11vw] max-w-[128px] max-h-[128px]
                   ${selectedPerson?.id === person.id ? "border-animate" : ""}`}
                             />
                             <h3 className="text-[clamp(1rem, 2vw, 1.25rem)] font-semibold mt-2">

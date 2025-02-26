@@ -1,9 +1,9 @@
 export const officeBearers = [
   {
     id: 1,
-    name: "Aditya Singh",
+    name: "Aditya Kumar",
     photo: "/os/os1.png", // ✅ Correct path
-    designation: "President",
+    designation: "Chair",
     message: "Striving for excellence and innovation!",
     socials: {
       linkedin: "https://linkedin.com/in/",
@@ -17,7 +17,7 @@ export const officeBearers = [
     id: 2,
     name: "Durga Sharma",
     photo: "/os/os2.png",
-    designation: "Vice President",
+    designation: "Vice Chair",
     message: "Committed to leading with passion!",
     socials: {
       linkedin: "https://linkedin.com/in/",
@@ -43,9 +43,9 @@ export const officeBearers = [
   },
   {
     id: 4,
-    name: "Ushnik Nath",
+    name: "Arpan Jain",
     photo: "/os/os4.png",
-    designation: "Treasurer",
+    designation: "Joint Secretary",
     message: "Ensuring financial integrity and transparency!",
     socials: {
       linkedin: "https://linkedin.com/in/",

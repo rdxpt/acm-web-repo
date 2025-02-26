@@ -26,11 +26,11 @@ export const Team = () => {
                 <div className="w-full md:w-[900px] h-auto md:h-[640px] bg-[#f6f2e6]/20 rounded-[28px] 
                         p-4 md:p-8 gap-4 md:gap-8 flex flex-col md:flex-row-reverse">
                     {/* Team Names Grid */}
-                    <div className="w-full md:w-1/4 grid gap-4 grid-cols-5 md:grid-cols-1 md:grid-rows-4">
+                    <div className="w-full md:w-1/4 grid gap-4 grid-cols-4 md:grid-cols-1 md:grid-rows-4 sm:grid-cols-3">
                         {teamMembers.map((team, index) => (
                             <div
                                 key={index}
-                                className={`rounded-[28px] flex items-center justify-center cursor-pointer transition-all 
+                                className={`wifull text-center text-[#F2F2E6] rounded-[22px] flex items-center justify-center cursor-pointer transition-all 
                             ${selectedTeam.name === team.name ? "border-animate" : "bg-[#1B1B23]"} 
                             text-sm sm:text-base md:text-xl h-16 md:h-[125px]`}
                                 onClick={() => setSelectedTeam(team)}
@@ -41,7 +41,7 @@ export const Team = () => {
                     </div>
 
                     {/* Profile Grid */}
-                    <div className="flex-1 grid gap-4 grid-cols-4 grid-rows-3 md:grid-cols-3 md:grid-rows-4">
+                    <div className="flex-1 grid gap-3 grid-cols-3 grid-rows-3 md:grid-cols-3 md:grid-rows-4">
                         {selectedTeam.members.map((member, index) => (
                             <ProfileImage key={index} id={index + 1} img={member.img} socials={member.socials} />
                         ))}
@@ -63,7 +63,7 @@ function ProfileImage({ id, img, socials }) {
                 className="object-cover object-center transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-sm"
             />
             {/* Social Icons Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a href={socials.github} target="_blank" className="hover:scale-110 transition-transform">
                     <img src="/social/github.svg" className="invert w-6 h-6" alt="GitHub" />
                 </a>

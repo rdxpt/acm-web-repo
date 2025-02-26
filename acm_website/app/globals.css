@@ -78,6 +78,36 @@ body {
   transform: rotateY(180deg);
 }
 
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 0 red, -2px -2px 0 cyan;
+  }
+  25% {
+    text-shadow: -2px 2px 0 red, 2px -2px 0 cyan;
+  }
+  50% {
+    text-shadow: 2px -2px 0 red, -2px 2px 0 cyan;
+  }
+  75% {
+    text-shadow: -2px -2px 0 red, 2px 2px 0 cyan;
+  }
+  100% {
+    text-shadow: 2px 2px 0 red, -2px -2px 0 cyan;
+  }
+}
+
+.glitch-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+  animation: glitch 0.2s infinite;
+  background: black;
+  padding: 10px;
+  display: inline-block;
+}
+
 
 /* ------ */
 /* Primary Header */

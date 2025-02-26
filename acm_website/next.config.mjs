@@ -1,5 +1,10 @@
-export const output = 'export';
-export const images = {
-    unoptimized: false,
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    output: 'export',
+    images: {
+      unoptimized: true,
+    },
+  };
+  
+  export default nextConfig;
   
