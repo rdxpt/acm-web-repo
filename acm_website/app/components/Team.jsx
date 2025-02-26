@@ -26,7 +26,7 @@ export const Team = () => {
                 <div className="w-full md:w-[900px] h-auto md:h-[640px] bg-[#f6f2e6]/20 rounded-[28px] 
                         p-4 md:p-8 gap-4 md:gap-8 flex flex-col md:flex-row-reverse">
                     {/* Team Names Grid */}
-                    <div className="w-full md:w-1/4 grid gap-4 grid-cols-4 md:grid-cols-1 md:grid-rows-4 sm:grid-cols-3">
+                    <div className="w-full md:w-1/4 grid gap-4 grid-cols-4 md:grid-cols-1 md:grid-rows-4 sm:grid-cols-4">
                         {teamMembers.map((team, index) => (
                             <div
                                 key={index}

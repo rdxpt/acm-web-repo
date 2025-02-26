@@ -24,9 +24,9 @@ export const teamMembers = [
           img: "/ts/103.jpg",
           id:103,
           socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
+            instagram: "https://www.instagram.com/hridaya.sharma/",
+            linkedin: "https://www.linkedin.com/in/hridaya-sharma-55513717b/",
+            github: "https://github.com/hridaya14"
           }
         },
         {
@@ -173,6 +173,92 @@ export const teamMembers = [
       ]
     },
     
+    
+    {
+      name: "Ground Team",
+      members: [
+        {
+          img: "/ts/501.jpg",
+          id:501,
+          socials: {
+            instagram: "https://instagram.com/member1",
+            linkedin: "https://linkedin.com/in/member1",
+            github: "https://github.com/member1"
+          }
+        },
+        {
+          img: "/ts/502.jpg",
+          id:502,
+          socials: {
+            instagram: "https://instagram.com/member2",
+            linkedin: "https://linkedin.com/in/member2",
+            github: "https://github.com/member2"
+          }
+        },
+        {
+          img: "/ts/503.jpg",
+          id:503,
+          socials: {
+            instagram: "https://instagram.com/member3",
+            linkedin: "https://linkedin.com/in/member3",
+            github: "https://github.com/member3"
+          }
+        },
+        {
+          img: "/ts/504.jpeg",
+          id:504,
+          socials: {
+            instagram: "https://instagram.com/member1",
+            linkedin: "https://linkedin.com/in/member1",
+            github: "https://github.com/member1"
+          }
+        },
+        {
+          img: "/ts/505.jpg",
+          id:505,
+          socials: {
+            instagram: "https://www.instagram.com/pavitrjain14?igsh=MWRhNHp1NGk0ZjQ2cg==",
+            linkedin: "https://www.linkedin.com/in/pavitr-jain-921264279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          }
+        },
+        {
+          img: "/ts/506.jpg",
+          id:506,
+          socials: {
+            instagram: "",
+            linkedin: "https://www.linkedin.com/in/shikhar-khare-3b8780310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            github: ""
+          }
+        },
+        {
+          img: "ts/ts/507.jpg",
+          id:507,
+          socials: {
+            instagram: "https://instagram.com/member1",
+            linkedin: "https://linkedin.com/in/member1",
+            github: "https://github.com/member1"
+          }
+        },
+        {
+          img: "/ts/508.jpg",
+          id:508,
+          socials: {
+            instagram: "https://instagram.com/member2",
+            linkedin: "https://linkedin.com/in/member2",
+            github: "https://github.com/member2"
+          }
+        },
+        {
+          img: "/ts/509.jpg",
+          id:509,
+          socials: {
+            instagram: "https://instagram.com/member3",
+            linkedin: "https://linkedin.com/in/member3",
+            github: "https://github.com/member3"
+          }
+        }
+      ]
+    },
     {
       name: "Outreach Team",
       members: [
@@ -258,93 +344,8 @@ export const teamMembers = [
           }
         }
       ]
-    },
-
-    {
-      name: "Ground Team",
-      members: [
-        {
-          img: "/ts/501.jpg",
-          id:501,
-          socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
-            github: "https://github.com/member1"
-          }
-        },
-        {
-          img: "/ts/502.jpg",
-          id:502,
-          socials: {
-            instagram: "https://instagram.com/member2",
-            linkedin: "https://linkedin.com/in/member2",
-            github: "https://github.com/member2"
-          }
-        },
-        {
-          img: "/ts/503.jpg",
-          id:503,
-          socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
-          }
-        },
-        {
-          img: "/ts/504.jpeg",
-          id:504,
-          socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
-            github: "https://github.com/member1"
-          }
-        },
-        {
-          img: "/ts/505.jpg",
-          id:505,
-          socials: {
-            instagram: "https://www.instagram.com/pavitrjain14?igsh=MWRhNHp1NGk0ZjQ2cg==",
-            linkedin: "https://www.linkedin.com/in/pavitr-jain-921264279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          }
-        },
-        {
-          img: "/ts/506.jpg",
-          id:506,
-          socials: {
-            instagram: "",
-            linkedin: "https://www.linkedin.com/in/shikhar-khare-3b8780310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            github: ""
-          }
-        },
-        {
-          img: "ts/ts/507.jpg",
-          id:507,
-          socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
-            github: "https://github.com/member1"
-          }
-        },
-        {
-          img: "/ts/508.jpg",
-          id:508,
-          socials: {
-            instagram: "https://instagram.com/member2",
-            linkedin: "https://linkedin.com/in/member2",
-            github: "https://github.com/member2"
-          }
-        },
-        {
-          img: "/ts/509.jpg",
-          id:509,
-          socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
-          }
-        }
-      ]
     }
+
     
     
   ];
