@@ -24,7 +24,7 @@ export default function Home() {
 
       <Element
         name="gallery"
-        className="h-64 md:h-screen flex items-center justify-center"
+        className="h-80 md:h-screen flex items-center justify-center"
       >
         <Carousel />
       </Element>

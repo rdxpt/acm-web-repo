@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 ::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Edge */
@@ -34,20 +32,44 @@ body {
   overflow-x: hidden;
 }
 
-
-
 /* Team.jsx and Office. animations*/
 
-
 @keyframes movingBorder {
-  0% { box-shadow: 0 0 5px #007aff, 0 0 10px #00ffcc; }
-  50% { box-shadow: 0 0 15px #00ffcc, 0 0 20px #007aff; }
-  100% { box-shadow: 0 0 5px #007aff, 0 0 10px #00ffcc; }
+  0% {
+    box-shadow: 0 0 5px #007aff, 0 0 10px #00ffcc;
+  }
+  50% {
+    box-shadow: 0 0 15px #00ffcc, 0 0 20px #007aff;
+  }
+  100% {
+    box-shadow: 0 0 5px #007aff, 0 0 10px #00ffcc;
+  }
 }
 
 .border-animate {
   border-width: 1px;
   animation: movingBorder 2s linear infinite;
+}
+
+/* Enhance the carousel border animation to be more noticeable but still smooth */
+@keyframes carouselmovingBorder {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.8), 0 0 12px rgba(0, 255, 204, 0.4);
+    border-color: rgba(59, 130, 246, 0.9);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(0, 255, 204, 0.8),
+      0 0 20px rgba(59, 130, 246, 0.6);
+    border-color: rgba(0, 255, 204, 0.9);
+  }
+}
+
+.carousel-preview-border {
+  border: 2px solid;
+  transform-origin: center;
+  animation: carouselmovingBorder 2s ease-in-out infinite;
+  filter: brightness(1.2);
 }
 
 @keyframes gentlePulse {
@@ -89,7 +111,6 @@ body {
   }
 }
 
-
 .team-img {
   transition: transform 0.5s ease-in-out;
 }
@@ -127,17 +148,16 @@ body {
   display: inline-block;
 }
 
-
 /* ------ */
 /* Primary Header */
 
-header{
-  font-family: 'Inter';
+header {
+  font-family: "Inter";
 }
-.primary-navigation{
+.primary-navigation {
   list-style: none;
-  padding : 0;
-  margin : 0;
+  padding: 0;
+  margin: 0;
 }
 
 .mobile-nav-toggle {
@@ -148,55 +168,49 @@ header{
   text-decoration: none;
 }
 
-.primary-navigation a > [ aria-hidden = "true" ] {
+.primary-navigation a > [aria-hidden="true"] {
   font-weight: 700;
-  margin-inline-end : .5em;
+  margin-inline-end: 0.5em;
 }
 
-@media (max-width: 40rem ) {
+@media (max-width: 40rem) {
   .primary-navigation {
-    gap : var(--gap,1rem);
-    z-index : 1000;
-    --gap : 2em;
-    position : fixed;
+    gap: var(--gap, 1rem);
+    z-index: 1000;
+    --gap: 2em;
+    position: fixed;
     font-weight: 700;
     height: 100vh;
     flex-direction: column;
-    inset : 0 0 0 30%;
-    padding : min(30vh , 10rem) 3rem;
-    background : hsl(0 0% 100% / 0.2);
-    backdrop-filter: blur(.75rem);
+    inset: 0 0 0 30%;
+    padding: min(30vh, 10rem) 3rem;
+    background: hsl(0 0% 100% / 0.2);
+    backdrop-filter: blur(0.75rem);
     transform: translateX(100%);
     transition: transform 350ms ease-out;
   }
 
-  .primary-navigation[data-visible = "true"]{
+  .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
   }
 
   .mobile-nav-toggle {
     display: block;
     position: absolute;
-    background : url('/menu.svg');
-    width : 2rem;
+    background: url("/menu.svg");
+    width: 2rem;
     background-repeat: no-repeat;
-    aspect-ratio : 1;
-    top : 1.5rem;
-    right : 1.5rem;
-    z-index : 9999;
-    border : 0;
+    aspect-ratio: 1;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    border: 0;
   }
 }
 
 /* Footer */
-.footer-bg{
-  background: linear-gradient(
-  to bottom,
-  #937688 0%,
-  #5557C2 19%,
-  #1E183A 100%
-);
+.footer-bg {
+  background: linear-gradient(to bottom, #937688 0%, #5557c2 19%, #1e183a 100%);
 }
-
 
 /* ------ */
