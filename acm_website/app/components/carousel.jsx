@@ -1,50 +1,33 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Carousel() {
   const itemsImage = useMemo(
     () => [
       {
-        image:
-          "https://img.freepik.com/free-photo/full-shot-students-preparing-exam_23-2149647062.jpg?t=st=1739709384~exp=1739712984~hmac=bb5d90da1492c81bed228e45187e1cf31d1f25e54957d12b96174d3c32e5e20c&w=1800",
+        image: "/gallery/1.webp",
       },
       {
-        image:
-          "https://img.freepik.com/free-photo/smiley-students-learning-stairs-front-view_23-2149647074.jpg?t=st=1739709700~exp=1739713300~hmac=4118692d223f47029488228e146c6af7178a7883805a2d94e39e3650a493d706&w=1800",
+        image: "/gallery/2.webp",
       },
       {
-        image:
-          "https://img.freepik.com/free-photo/full-shot-students-cramming-together_23-2149647137.jpg?t=st=1739709730~exp=1739713330~hmac=b070256c28f6633b94bc7beb6167adead559bfbb41a731538ac91a5fd664d99d&w=1800",
+        image: "/gallery/3.webp",
       },
       {
-        image:
-          "https://img.freepik.com/free-photo/full-shot-students-preparing-exam_23-2149647062.jpg?t=st=1739709384~exp=1739712984~hmac=bb5d90da1492c81bed228e45187e1cf31d1f25e54957d12b96174d3c32e5e20c&w=1800",
+        image: "/gallery/4.webp",
       },
       {
-        image:
-          "https://img.freepik.com/free-photo/smiley-students-learning-stairs-front-view_23-2149647074.jpg?t=st=1739709700~exp=1739713300~hmac=4118692d223f47029488228e146c6af7178a7883805a2d94e39e3650a493d706&w=1800",
+        image: "/gallery/5.webp",
       },
       {
-        image:
-          "https://img.freepik.com/free-photo/full-shot-students-cramming-together_23-2149647137.jpg?t=st=1739709730~exp=1739713330~hmac=b070256c28f6633b94bc7beb6167adead559bfbb41a731538ac91a5fd664d99d&w=1800",
-      },
-      {
-        image:
-          "https://img.freepik.com/free-photo/full-shot-students-preparing-exam_23-2149647062.jpg?t=st=1739709384~exp=1739712984~hmac=bb5d90da1492c81bed228e45187e1cf31d1f25e54957d12b96174d3c32e5e20c&w=1800",
-      },
-      {
-        image:
-          "https://img.freepik.com/free-photo/smiley-students-learning-stairs-front-view_23-2149647074.jpg?t=st=1739709700~exp=1739713300~hmac=4118692d223f47029488228e146c6af7178a7883805a2d94e39e3650a493d706&w=1800",
-      },
-      {
-        image:
-          "https://img.freepik.com/free-photo/full-shot-students-cramming-together_23-2149647137.jpg?t=st=1739709730~exp=1739713330~hmac=b070256c28f6633b94bc7beb6167adead559bfbb41a731538ac91a5fd664d99d&w=1800",
+        image: "/gallery/6.webp",
       },
     ],
     []
   );
-  const items = Array.from({ length: 9 }, (_, i) => i + 1);
+  const items = Array.from({ length: 6 }, (_, i) => i + 1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const wrapIndex = (index) => (index + items.length) % items.length;
   const leftIndex = wrapIndex(currentIndex - 1);
@@ -66,13 +49,16 @@ export default function Carousel() {
           initial={{ opacity: 0, x: -100, scale: 0.8 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 150, damping: 20 }}
-          className="bg-white rounded-3xl flex items-center justify-center text-2xl text-black w-[30%] md:w-[20%] h-[8rem] md:h-[26rem] 2xl:w-[15%] 2xl:h-[40rem]"
+          className="bg-white rounded-3xl flex items-center justify-center text-2xl text-black w-[30%] md:w-[20%] h-[8rem] md:h-[26rem] 2xl:w-[15%] 2xl:h-[40rem] relative"
         >
-          <img
+          <Image
             src={itemsImage[leftIndex].image}
             alt="Left Card"
-            draggable="false"
-            className="object-cover w-full h-full rounded-3xl"
+            fill
+            sizes="(max-width: 768px) 30vw, (max-width: 1536px) 20vw, 15vw"
+            priority={false}
+            className="object-cover rounded-3xl"
+            quality={75}
           />
         </motion.div>
         <motion.div
@@ -87,13 +73,17 @@ export default function Carousel() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 150, damping: 20 }}
-          className="bg-gray-600 rounded-3xl flex items-center justify-center text-white text-3xl w-[80%] md:w-[60%] h-[10rem] md:h-[30rem] 2xl:w-[70%] 2xl:h-[45rem] "
+          className="bg-gray-600 rounded-3xl flex items-center justify-center text-white text-3xl w-[80%] md:w-[60%] h-[10rem] md:h-[30rem] 2xl:w-[70%] 2xl:h-[45rem] relative"
         >
-          <img
+          <Image
             src={itemsImage[currentIndex].image}
             alt="Center Card"
-            draggable="false"
-            className="object-cover w-full h-full rounded-3xl"
+            fill
+            sizes="(max-width: 768px) 80vw, (max-width: 1536px) 60vw, 70vw"
+            priority={true}
+            className="object-cover rounded-3xl"
+            quality={85}
+            draggable={false}
           />
         </motion.div>
         <motion.div
@@ -102,13 +92,16 @@ export default function Carousel() {
           initial={{ opacity: 0, x: 100, scale: 0.8 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 150, damping: 20 }}
-          className="bg-white rounded-3xl flex items-center justify-center text-2xl text-black w-[30%] md:w-[20%] h-[8rem] md:h-[26rem] 2xl:w-[15%] 2xl:h-[40rem]"
+          className="bg-white rounded-3xl flex items-center justify-center text-2xl text-black w-[30%] md:w-[20%] h-[8rem] md:h-[26rem] 2xl:w-[15%] 2xl:h-[40rem] relative"
         >
-          <img
+          <Image
             src={itemsImage[rightIndex].image}
             alt="Right Card"
-            draggable="false"
-            className="object-cover w-full h-full rounded-3xl"
+            fill
+            sizes="(max-width: 768px) 30vw, (max-width: 1536px) 20vw, 15vw"
+            priority={false}
+            className="object-cover rounded-3xl"
+            quality={75}
           />
         </motion.div>
       </div>
