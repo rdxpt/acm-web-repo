@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { handleContactForm } from "../utils/actions";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,6 @@ const Footer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    setFormData({ name: "", email: "", message: "" });
   };
 
   // Social Media Links and Icons
@@ -32,8 +32,8 @@ const Footer = () => {
   ];
 
   return (
-    <>
-      <footer className="w-full flex flex-row-reverse max-lg:flex-col-reverse max-lg:items-center max-lg:gap-6 justify-around p-12">
+    <div className="bg-[#1E183A]">
+      <footer className="w-full flex flex-row-reverse max-lg:flex-col-reverse max-lg:items-center max-lg:gap-6 justify-around p-12 bg-gradient-to-b from-[#9376B8_0%] via-[#5557C2_19%] to-[#1E183A_100%]">
         {/* Left Section: Logo & Socials */}
         <section className="space-y-4 flex flex-col items-center">
           <Image src="/acm_large.svg" alt="ACM Logo" width={400} height={400} className="block" />
@@ -53,12 +53,12 @@ const Footer = () => {
         </section>
 
         {/* Right Section: Contact Form */}
-        <div className="bg-white/10 backdrop-blur-md max-sm:p-4 p-6 rounded-lg shadow-lg w-full max-w-lg">
+        <div className="bg-[#cfccea]/90 backdrop-blur-md max-sm:p-4 p-6 rounded-lg shadow-lg w-full max-w-lg">
           {/* Heading */}
-          <h2 className="text-center text-2xl font-bold text-white mb-6">Contact Us</h2>
+          <h2 className="text-center text-2xl font-bold text-black mb-6">Contact Us</h2>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form action={handleContactForm} className="space-y-6">
             {/* Input Fields */}
             {[
               { id: "name", type: "text", placeholder: "Full Name" },
@@ -72,7 +72,7 @@ const Footer = () => {
                   value={formData[id]}
                   onChange={handleChange}
                   placeholder={formData[id] ? "" : placeholder}
-                  className="w-full p-3 bg-white/20 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 border border-gray-300 focus:border-blue-500"
+                  className="text-black w-full p-3 bg-[#b0afc5] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 placeholder-gray-700"
                   required
                 />
               </div>
@@ -87,7 +87,7 @@ const Footer = () => {
                 placeholder={formData.message ? "" : "Your Message..."}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full p-3 bg-white/20 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 border border-gray-300 focus:border-blue-500"
+                className="text-black w-full p-3 bg-[#b0afc5] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 placeholder-gray-700"
                 required
               />
             </div>
@@ -104,10 +104,10 @@ const Footer = () => {
       </footer>
 
       {/* Footer Bottom Section - Now Visible */}
-      <div className="w-full text-center py-4 text-gray-400 text-sm">
+      <div className="w-full text-center py-4 text-gray-200 text-sm">
         © 2025 ACM USAR, All Rights Reserved
       </div>
-    </>
+    </div>
   );
 };
 
