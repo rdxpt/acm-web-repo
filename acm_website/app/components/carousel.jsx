@@ -284,7 +284,7 @@ export default function Carousel({ autoScrollInterval = 5000 }) {
               initial={{ opacity: 0, x: -100, scale: 0.8 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ type: "spring", stiffness: 150, damping: 20 }}
-              className="bg-white rounded-3xl flex items-center justify-center text-2xl text-black w-[30%] md:w-[20%] h-[8rem] md:h-[26rem] 2xl:w-[15%] 2xl:h-[40rem]"
+              className="bg-white rounded-3xl flex items-center justify-center text-2xl text-black w-[30%] md:w-[15%] h-[8rem] md:h-[26rem] 3xl:w-[15%] 3xl:h-[40rem]"
             >
               <Image
                 width={100}
@@ -319,7 +319,7 @@ export default function Carousel({ autoScrollInterval = 5000 }) {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: "spring", stiffness: 150, damping: 20 }}
-              className="bg-gray-600 rounded-3xl flex items-center justify-center text-white text-3xl w-[80%] md:w-[60%] h-[10rem] md:h-[30rem] 2xl:w-[70%] 2xl:h-[45rem] overflow-hidden relative"
+              className="bg-gray-600 rounded-3xl flex items-center justify-center text-white text-3xl w-[80%] md:w-[70%] h-[10rem] md:h-[30rem] 3xl:w-[70%] 3xl:h-[45rem] overflow-hidden relative"
             >
               <Image
                 width={100}
@@ -347,7 +347,7 @@ export default function Carousel({ autoScrollInterval = 5000 }) {
               initial={{ opacity: 0, x: 100, scale: 0.8 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ type: "spring", stiffness: 150, damping: 20 }}
-              className="bg-white rounded-3xl flex items-center justify-center text-2xl text-black w-[30%] md:w-[20%] h-[8rem] md:h-[26rem] 2xl:w-[15%] 2xl:h-[40rem]"
+              className="bg-white rounded-3xl flex items-center justify-center text-2xl text-black w-[30%] md:w-[15%] h-[8rem] md:h-[26rem] 3xl:w-[15%] 3xl:h-[40rem]"
             >
               <Image
                 width={100}
