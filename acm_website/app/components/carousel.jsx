@@ -86,7 +86,8 @@ export default function Carousel({ autoScrollInterval = 5000 }) {
         const scrollLeft =
           activeThumb.offsetLeft -
           container.clientWidth / 2 +
-          activeThumb.clientWidth / 2;
+          activeThumb.clientWidth / 2 -
+          20;
         container.scrollTo({
           left: scrollLeft,
           behavior: "smooth",
@@ -241,7 +242,7 @@ export default function Carousel({ autoScrollInterval = 5000 }) {
                     setTimeout(() => setIsChanging(false), 50);
                   }
                 }}
-                className={`relative min-w-[6.5rem] h-20 rounded-lg overflow-hidden flex-shrink-0 cursor-pointer transition-all duration-300
+                className={`relative min-w-[7.5rem] h-20 rounded-lg overflow-hidden flex-shrink-0 cursor-pointer transition-all duration-300
                   ${
                     currentIndex === index
                       ? "carousel-preview-border shadow-lg z-10"
