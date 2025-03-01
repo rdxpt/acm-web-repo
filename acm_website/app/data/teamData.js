@@ -15,9 +15,9 @@ export const teamMembers = [
           img: "/ts/102.jpg",
           id:102,
           socials: {
-            instagram: "https://instagram.com/member2",
-            linkedin: "https://linkedin.com/in/member2",
-            github: "https://github.com/member2"
+            instagram: "https://www.instagram.com/kanishk._.2",
+            linkedin: "http://www.linkedin.com/in/kanishk-kumar-926426258",
+            github: "https://github.com/kanishk-8"
           }
         },
         {
@@ -30,12 +30,12 @@ export const teamMembers = [
           }
         },
         {
-          img: "/ts/ts/104.jpg",
+          img: "/ts/104.jpg",
           id:104,
           socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
-            github: "https://github.com/member1"
+            instagram: "http://Instagram.com/friedbaconsauce",
+            linkedin: "http://linkedin.com/in/arsh-ahmad",
+            github: "http://gitHub.com/arsh199965"
           }
         },
         {
@@ -51,9 +51,9 @@ export const teamMembers = [
           img: "/ts/106.jpg",
           id:106,
           socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
+            instagram: "https://www.instagram.com/am_stupid00/",
+            linkedin: "https://www.linkedin.com/in/abhijith-ks-8b8290207/",
+            github: "https://www.github.com/abhiKandS"
           }
         },
         {
@@ -78,9 +78,9 @@ export const teamMembers = [
           img: "/ts/109.jpg",
           id:109,
           socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
+            instagram: "https://www.instagram.com/harshit06660",
+            linkedin: "https://www.linkedin.com/in/harshitism",
+            github: "https://www.github.com/harshitism"
           }
         }
       ]
@@ -117,30 +117,30 @@ export const teamMembers = [
           }
         },
         {
-          img: "ts/ts/304.jpg",
+          img: "/ts/304.jpg",
           id:304,
           socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
+            instagram: "https://www.instagram.com/whymayannk?igsh=MWNxa2xkdTEwOGc0",
+            linkedin: "https://www.linkedin.com/in/prabhakar-jangid-23505a285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
             github: "https://github.com/member1"
           }
         },
         {
-          img: "/ts/305.jpg",
+          img: "/ts/305.png",
           id:305,
           socials: {
-            instagram: "https://instagram.com/member2",
+            instagram: "",
             linkedin: "https://linkedin.com/in/member2",
-            github: "https://github.com/member2"
+            github: ""
           }
         },
         {
-          img: "/ts/306.jpg",
+          img: "/ts/306.jpeg",
           id:306,
           socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
+            instagram: "https://www.instagram.com/palak_170105?igsh=bmZscHE1OHl3b2dj&utm_source=qr",
+            linkedin: "https://www.linkedin.com/in/palak-pallavi-267b00219/",
+            github: "https://github.com/Palak0105"
           }
         },
         {
@@ -182,17 +182,17 @@ export const teamMembers = [
           id:501,
           socials: {
             instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
-            github: "https://github.com/member1"
+            linkedin: "https://www.linkedin.com/in/prabhakar-jangid-23505a285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            github: "https://www.instagram.com/whymayannk?igsh=MWNxa2xkdTEwOGc0"
           }
         },
         {
           img: "/ts/502.jpg",
           id:502,
           socials: {
-            instagram: "https://instagram.com/member2",
-            linkedin: "https://linkedin.com/in/member2",
-            github: "https://github.com/member2"
+            instagram: "",
+            linkedin: "https://www.linkedin.com/in/sushant-/",
+            github: "https://github.com/sushant0753"
           }
         },
         {
@@ -231,7 +231,7 @@ export const teamMembers = [
           }
         },
         {
-          img: "ts/ts/507.jpg",
+          img: "/ts/507.jpg",
           id:507,
           socials: {
             instagram: "https://instagram.com/member1",
@@ -243,9 +243,9 @@ export const teamMembers = [
           img: "/ts/508.jpg",
           id:508,
           socials: {
-            instagram: "https://instagram.com/member2",
-            linkedin: "https://linkedin.com/in/member2",
-            github: "https://github.com/member2"
+            instagram: "https://www.instagram.com/i._.vanshika_?igsh=MTBtamMwYWNocDJkMw%3D%3D&utm_source=qr",
+            linkedin: "https://www.linkedin.com/in/vanshika-mishra-5673512a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            github: "https://github.com/Vanshikamishra2610"
           }
         },
         {
@@ -285,7 +285,7 @@ export const teamMembers = [
           id:403,
           socials: {
             instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
+            linkedin: "https://www.linkedin.com/in/roshni-ahmad-a87197328",
             github: "https://github.com/member3"
           }
         },
