@@ -370,8 +370,7 @@ export default function Carousel({ autoScrollInterval = 5000 }) {
               {currentIndex + 1}/{items.length}
             </div>
           </div>
-        </div>
-      )}
+        </div>      )}
     </>
   );
 }

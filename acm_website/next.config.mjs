@@ -11,4 +11,3 @@ const nextConfig = {
 export const images = {
     unoptimized: true,
 };
-  

@@ -104,7 +104,7 @@ const About = () => {
                 The Association for Computing Machinery
               </h3>
 
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-justify text-gray-300">
                 <p>
                   ACM brings together computing educators, researchers, and
                   professionals to inspire dialogue, share resources, and
@@ -114,9 +114,7 @@ const About = () => {
                   standards, and recognition of technical excellence.
                 </p>
                 <p>
-                  We're on a mission to expand the boundaries of technology,
-                  drive innovation, and foster a future where computing serves
-                  both humankind and scientific exploration.
+                  At the USAR ACM Student Chapter, we believe in empowering students to become successful computing professionals. We offer a robust program focused on both technical skill development and professional networking. Our networking events open doors to recruiters, engineers, and leaders from top tech companies, while guest lectures from industry experts provide invaluable insights into the latest trends and career strategies. Whether you're looking to sharpen your technical expertise, explore cutting-edge technologies, or expand your professional network, we are here to support your journey. Join us to connect, learn, and grow with a passionate community of tech enthusiasts
                 </p>
               </div>
 
@@ -127,6 +125,8 @@ const About = () => {
                   "Data Science",
                   "Algorithms",
                   "Cloud Computing",
+                  "Web Development",
+                  "Internet of Things"
                 ].map((tag, i) => (
                   <motion.span
                     key={i}
@@ -167,7 +167,7 @@ const About = () => {
             className="lg:col-span-5 space-y-8"
           >
             <div className="rounded-2xl p-8 backdrop-blur-sm bg-white/5 border border-white/10">
-              <h3 className="text-xl font-bold text-white mb-6">Our Impact</h3>
+              <h3 className="text-xl font-bold text-white mb-6">The Global Impact</h3>
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
@@ -275,12 +275,12 @@ const About = () => {
                     d="M19 14l-7 7m0 0l-7-7m7 7V3"
                   />
                 </svg>
-                <h3 className="text-xl font-bold text-white">Join Us</h3>
+                <h3 className="text-xl text-justify font-bold text-white">Join Us</h3>
               </div>
 
               <p className="text-gray-300 mb-5">
                 Ready to explore the frontiers of computing? Connect with
-                passionate experts and access cutting-edge resources.
+                passionate experts and access cutting-edge resources and environment.
               </p>
 
               <motion.button
