@@ -65,7 +65,7 @@ export default function Background() {
                 bottom: (window.innerWidth <= 425) ? -0.1 * window.innerHeight : -0.8 * window.innerHeight,
             });
             console.log(window.innerWidth, windowSize.w);
-            
+
         };
 
         window.addEventListener("resize", handleResize);

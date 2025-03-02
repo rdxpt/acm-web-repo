@@ -11,6 +11,10 @@ export const NavBar = () => {
     setNavVisible((prev) => !prev);
   };
 
+  const closeNav = () => {
+    setNavVisible(false);
+  };
+
   useEffect(() => {
     const updateProgress = () => {
       const scrollTop = window.scrollY;
@@ -18,17 +22,17 @@ export const NavBar = () => {
         document.documentElement.scrollHeight - window.innerHeight;
       const progress = (scrollTop / scrollHeight) * 100;
       setScrollProgress(progress);
-      requestAnimationFrame(updateProgress); // Ensures smooth animation
     };
 
-    requestAnimationFrame(updateProgress);
-    return () => cancelAnimationFrame(updateProgress);
+    window.addEventListener("scroll", updateProgress);
+    return () => {
+      window.removeEventListener("scroll", updateProgress);
+    };
   }, []);
 
   return (
-    <header
-      className="fixed top-0 left-0 w-full z-50 bg-[#28242c]/60 backdrop-blur-sm h-16 p-2 xl:px-6 flex items-center justify-between"
-    >
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#28242c]/60 backdrop-blur-sm h-16 p-2 xl:px-6 flex items-center justify-between">
+      {/* Logo */}
       <div className="flex items-center space-x-2">
         <Image src="/acm_icon.svg" height={50} width={50} alt="ACM Icon" />
         <div className="flex items-center space-x-2">
@@ -36,77 +40,54 @@ export const NavBar = () => {
             ACM
           </h3>
           <span className="text-[#F7F7F7] max-md:hidden">|</span>
-          <h3 className="max-md:text-xl text-2xl font-bold text-[#F7F7F7] max-lg:hidden">
+          <h3 className="text-lg xl:text-2xl font-bold text-[#F7F7F7] hidden lg:block">
             University School of Automation and Robotics
           </h3>
-          <h3 className="max-md:text-xl text-2xl font-bold text-[#F7F7F7] max-sm:hidden lg:hidden">
+          <h3 className="max-lg:text-xl font-bold text-[#F7F7F7] lg:hidden">
             USAR
           </h3>
         </div>
       </div>
 
-      {/* Toggle Button */}
+      {/* Mobile Toggle Button */}
       <button
         aria-controls="primary-navigation"
         aria-expanded={navVisible}
         className="mobile-nav-toggle"
         onClick={toggleNav}
+        style={{
+          background: `url(${navVisible ? "/Close.svg" : "/menu.svg"}) center center / contain no-repeat`,
+        }}
       >
-        <span className="sr-only">Menu</span>
+        <span className="sr-only">{navVisible ? "Close menu" : "Open menu"}</span>
       </button>
 
-      <nav>
-        <ul
-          id="primary-navigation"
-          className="flex primary-navigation text-white md:gap-6 font-normal max-md:text-lg text-xl"
-          data-visible={navVisible}
-        >
+      {/* Navigation Menu */}
+      <nav
+        id="primary-navigation"
+        className={`primary-navigation text-white md:gap-8 font-normal max-md:text-lg text-xl transition-transform duration-300 ease-in-out ${
+          navVisible ? "translate-x-0" : "translate-x-full"
+        } md:translate-x-0`}
+      >
+        <ul className="flex flex-col md:flex-row">
           <li className="active cursor-pointer px-2 py-1">
-            <Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <span aria-hidden="true" className="md:hidden">00</span> About
+            <Link to="about" spy smooth offset={-70} duration={500} onClick={closeNav}>
+              About
             </Link>
           </li>
           <li className="active cursor-pointer px-2 py-1">
-            <Link
-              activeClass="active"
-              to="gallery"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <span aria-hidden="true" className="md:hidden">01</span> Gallery
+            <Link to="gallery" spy smooth offset={-70} duration={500} onClick={closeNav}>
+              Gallery
             </Link>
           </li>
           <li className="cursor-pointer px-2 py-1">
-            <Link
-              activeClass="active"
-              to="team"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <span aria-hidden="true" className="md:hidden">02</span> Team
+            <Link to="Teams" spy smooth offset={-70} duration={500} onClick={closeNav}>
+              Team
             </Link>
           </li>
           <li className="cursor-pointer md:bg-[#8097FF] md:bg-opacity-41 px-2 py-1 rounded-lg">
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <span aria-hidden="true" className="sm:hidden">03</span> Contact
+            <Link to="contact" spy smooth offset={-70} duration={500} onClick={closeNav}>
+              Contact
             </Link>
           </li>
         </ul>
