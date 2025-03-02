@@ -100,18 +100,18 @@ const Hero = () => {
 
       <div ref={heroRef} className=" w-full h-screen overflow-hidden">
         <div className="md:flex md:flex-row flex flex-col-reverse items-center justify-center md:h-full mt-[28vh] md:mt-0 px-16 max-w-1/2 ">
-          <div className="flex flex-col items-start justify-center ml-[10%] space-y-[0.3vw] ">
-            <h1 className="text-gray-200 md:text-[3.6vw] text-[5.7vw] font-bold">
+          <div className="flex flex-col items-start md:mt-0 mt-[3rem] justify-center ml-[10%] space-y-[0.3vw] ">
+            <h1 className="text-gray-200 md:text-[3.6vw] text-[7vw] font-bold">
               Association for
             </h1>
-            <div className="bg-[#8097FF] bg-opacity-30 border border-white border-opacity-15 backdrop-blur-sm md:w-[35vw] w-[54vw] pl-[0.8vw] py-[0.4vw] rounded-lg">
-              <h2 className="text-white md:text-[3vw] text-[4.9vw] font-bold">
+            <div className="bg-[#8097FF] bg-opacity-30 border border-white border-opacity-15 backdrop-blur-sm md:w-[35vw] w-[72vw] pl-[0.8vw] py-[0.4vw] rounded-lg">
+              <h2 className="text-white md:text-[3vw] text-[6.5vw] font-bold">
                 <span className="cursor">{displayedText}</span>
               </h2>
             </div>
           </div>
 
-          <div className=" flex items-center justify-center md:w-1/2 w-[50vw] h-full">
+          <div className=" flex items-center justify-center md:w-1/2 w-[60vw] h-full">
             <Image
               src="/acm_icon.svg"
               alt="ACM Logo"
