@@ -1,5 +1,6 @@
 import { Resend } from "resend";
-import { EmailTemplate } from "@/src/components/EmailTemplate";
+import { EmailTemplate } from "../../../components/EmailTemplate";
+
 
 export async function POST(req) {
   try {
