@@ -26,18 +26,27 @@ const Footer = () => {
   const socialMedia = [
     { name: "call", url: "tel:+123456789" },
     { name: "mail", url: "mailto:contact@usar.acm.org" },
-    { name: "linkedin", url: "https://www.linkedin.com/company/ggsipu-usar-acm-student-chapter/" },
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/company/ggsipu-usar-acm-student-chapter/",
+    },
     { name: "insta", url: "https://www.instagram.com/usaracm" },
     { name: "x", url: "https://twitter.com/acm_usar" },
   ];
 
   return (
-    <div className="bg-[#1E183A]">
-      <footer className="w-full flex flex-row-reverse max-lg:flex-col-reverse max-lg:items-center max-lg:gap-6 justify-around p-12 bg-gradient-to-b from-[#9376B8_0%] via-[#5557C2_19%] to-[#1E183A_100%]">
+    <div className="   mt-[15rem]">
+      <footer className="w-full flex flex-row-reverse max-lg:flex-col-reverse max-lg:items-center max-lg:gap-6 justify-around p-12 ">
         {/* Left Section: Logo & Socials */}
-        <section className="space-y-4 flex flex-col items-center">
-          <Image src="/acm_large.svg" alt="ACM Logo" width={400} height={400} className="block" />
-          <div className="flex gap-6 justify-center">
+        <section className="space-y-4 flex flex-col justify-center items-center">
+          <Image
+            src="/acm_large.svg"
+            alt="ACM Logo"
+            width={400}
+            height={400}
+            className="block"
+          />
+          <div className="flex gap-6 justify-center items-center  md:pl-16">
             {socialMedia.map(({ name, url }) => (
               <a
                 key={name}
@@ -46,16 +55,23 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="transition-transform transform hover:scale-110"
               >
-                <Image src={`/social/${name}.svg`} alt={name} width={40} height={40} />
+                <Image
+                  src={`/social/${name}.svg`}
+                  alt={name}
+                  width={40}
+                  height={40}
+                />
               </a>
             ))}
           </div>
         </section>
 
         {/* Right Section: Contact Form */}
-        <div className="bg-[#cfccea]/90 backdrop-blur-md max-sm:p-4 p-6 rounded-lg shadow-lg w-full max-w-lg">
+        <div className="bg-[#f6f2e6]/20 backdrop-blur-md max-sm:p-4 p-6 rounded-lg shadow-lg w-full max-w-lg">
           {/* Heading */}
-          <h2 className="text-center text-2xl font-bold text-black mb-6">Contact Us</h2>
+          <h2 className="text-center text-3xl font-black text-white mb-6">
+            Contact Us
+          </h2>
 
           {/* Form */}
           <form action={handleContactForm} className="space-y-6">
@@ -72,7 +88,7 @@ const Footer = () => {
                   value={formData[id]}
                   onChange={handleChange}
                   placeholder={formData[id] ? "" : placeholder}
-                  className="text-black w-full p-3 bg-[#b0afc5] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 placeholder-gray-700"
+                  className="text-white w-full p-3 bg-[#1b1b23] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-400 focus:border-blue-500 placeholder-gray-400"
                   required
                 />
               </div>
@@ -87,7 +103,7 @@ const Footer = () => {
                 placeholder={formData.message ? "" : "Your Message..."}
                 value={formData.message}
                 onChange={handleChange}
-                className="text-black w-full p-3 bg-[#b0afc5] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 placeholder-gray-700"
+                className="text-white w-full p-3 bg-[#1b1b23] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 focus:border-blue-500 placeholder-gray-400"
                 required
               />
             </div>
@@ -95,7 +111,7 @@ const Footer = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg w-full transition-all transform hover:scale-105"
+              className="bg-[#8097FF] hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg w-full transition-all transform hover:scale-105"
             >
               Send Message
             </button>
