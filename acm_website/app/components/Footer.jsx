@@ -24,13 +24,13 @@ const Footer = () => {
 
   // Social Media Links and Icons
   const socialMedia = [
-    { name: "call", url: "tel:+123456789" },
-    { name: "mail", url: "mailto:contact@usar.acm.org" },
+    { name: "whatsapp", url: "https://chat.whatsapp.com/JUekZH0Kz1YHildMZLrncW" },
+    { name: "mail", url: "mailto:usaracm@ipu.ac.in" },
     {
       name: "linkedin",
       url: "https://www.linkedin.com/company/ggsipu-usar-acm-student-chapter/",
     },
-    { name: "insta", url: "https://www.instagram.com/usaracm" },
+    { name: "insta", url: "https://www.instagram.com/usaracm/" },
     { name: "x", url: "https://twitter.com/acm_usar" },
   ];
 
@@ -40,13 +40,13 @@ const Footer = () => {
         {/* Left Section: Logo & Socials */}
         <section className="space-y-4 flex flex-col justify-center items-center">
           <Image
-            src="/acm_large.svg"
+            src="/acm_large2.svg"
             alt="ACM Logo"
             width={400}
             height={400}
-            className="block"
+            className="block scale-125"
           />
-          <div className="flex gap-6 justify-center items-center  md:pl-16">
+          <div className="flex gap-6 justify-center items-center">
             {socialMedia.map(({ name, url }) => (
               <a
                 key={name}

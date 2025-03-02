@@ -144,10 +144,10 @@ export const teamMembers = [
           }
         },
         {
-          img: "ts/ts/307.jpg",
+          img: "/ts/307.jpeg",
           id:307,
           socials: {
-            instagram: "https://instagram.com/member1",
+            instagram: "https://www.instagram.com/amang01012006/",
             linkedin: "https://linkedin.com/in/member1",
             github: "https://github.com/member1"
           }
@@ -181,9 +181,8 @@ export const teamMembers = [
           img: "/ts/501.jpg",
           id:501,
           socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://www.linkedin.com/in/prabhakar-jangid-23505a285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            github: "https://www.instagram.com/whymayannk?igsh=MWNxa2xkdTEwOGc0"
+            linkedin: "https://www.linkedin.com/in/rohan-yadav-061102310/",
+            github: "https://github.com/Rohanyadav-07"
           }
         },
         {
@@ -199,9 +198,9 @@ export const teamMembers = [
           img: "/ts/503.jpg",
           id:503,
           socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
+            instagram: "https://www.instagram.com/anikettkumar._?igsh=MXc3eHJqZDUza2FkdQ==",
+            linkedin: "https://github.com/a4-Aniket",
+            github: "https://github.com/a4-Aniket"
           }
         },
         {
@@ -252,9 +251,9 @@ export const teamMembers = [
           img: "/ts/509.jpg",
           id:509,
           socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
-            github: "https://github.com/member3"
+            instagram: "https://www.instagram.com/vedaant04_/",
+            linkedin: "https://www.linkedin.com/in/vedaant-mitra-214131288/",
+            github: "https://github.com/Vedaant26"
           }
         }
       ]
@@ -290,12 +289,12 @@ export const teamMembers = [
           }
         },
         {
-          img: "ts/ts/404.jpg",
+          img: "/ts/404.jpg",
           id:404,
           socials: {
-            instagram: "https://instagram.com/member1",
-            linkedin: "https://linkedin.com/in/member1",
-            github: "https://github.com/member1"
+            instagram: "https://www.instagram.com/ruchira7506/",
+            linkedin: "http://www.linkedin.com/in/ruchira-chaubey-a10408312",
+            github: "https://github.com/ruchirachaubey"
           }
         },
         {

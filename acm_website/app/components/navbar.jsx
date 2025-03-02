@@ -30,7 +30,7 @@ export const NavBar = () => {
       className="fixed top-0 left-0 w-full z-50 bg-[#28242c]/60 backdrop-blur-sm h-16 p-2 xl:px-6 flex items-center justify-between"
     >
       <div className="flex items-center space-x-2">
-        <Image src="/acm_icon.svg" height={50} width={50} alt="ACM Icon" />
+        <Image src="/acm_large2.svg" height={50} width={50} alt="ACM Icon" />
         <div className="flex items-center space-x-2">
           <h3 className="text-[#00C0FF] font-bold max-md:text-xl text-2xl">
             ACM
@@ -88,7 +88,7 @@ export const NavBar = () => {
           <li className="cursor-pointer px-2 py-1">
             <Link
               activeClass="active"
-              to="team"
+              to="Office"
               spy={true}
               smooth={true}
               offset={-70}
