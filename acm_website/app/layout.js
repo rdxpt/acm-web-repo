@@ -14,8 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ACM USAR",
-  description: "Developed by ACM USAR Web Team",
+  title: "ACM-USAR",
+  icons: {
+    icon: "/acm_favicon.svg",
+  }
 };
 
 export default function RootLayout({ children }) {

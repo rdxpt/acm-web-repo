@@ -2,6 +2,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
+const socialMedia = [
+  { name: "whatsapp", url: "https://chat.whatsapp.com/JUekZH0Kz1YHildMZLrncW" },
+  { name: "mail", url: "mailto:usaracm@ipu.ac.in" },
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/company/ggsipu-usar-acm-student-chapter/",
+  },
+  { name: "insta", url: "https://www.instagram.com/usaracm/" },
+  { name: "x", url: "https://twitter.com/acm_usar" },
+];
+
 const CountUp = ({ end, duration = 2 }) => {
   const [count, setCount] = useState(0);
   const nodeRef = useRef(null);
@@ -105,8 +116,8 @@ const About = () => {
               </h3>
 
               <div className="space-y-4 text-justify text-gray-300 md:text-md">
-              <p> ACM unites computing educators, researchers, and professionals to foster dialogue, share resources, and tackle industry challenges. As the world's largest computing society, we advocate for excellence, leadership, and technical innovation. </p> 
-              <p> The USAR ACM Student Chapter empowers students with technical skills and networking opportunities. We connect members with top recruiters, engineers, and industry leaders through events and expert talks, helping them stay ahead in tech and career growth. Join us to learn, connect, and thrive in a dynamic community of computing enthusiasts. </p>
+                <p> ACM unites computing educators, researchers, and professionals to foster dialogue, share resources, and tackle industry challenges. As the world's largest computing society, we advocate for excellence, leadership, and technical innovation. </p>
+                <p> The USAR ACM Student Chapter empowers students with technical skills and networking opportunities. We connect members with top recruiters, engineers, and industry leaders through events and expert talks, helping them stay ahead in tech and career growth. Join us to learn, connect, and thrive in a dynamic community of computing enthusiasts. </p>
               </div>
 
               <div className="flex flex-wrap gap-2 mt-8 mb-8">
@@ -274,26 +285,25 @@ const About = () => {
                 passionate experts and access cutting-edge resources and environment.
               </p>
 
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="w-full py-3 px-4 bg-blue-500/20 hover:bg-blue-500/30 transition-colors rounded-lg text-blue-300 font-medium flex items-center justify-center"
-              >
-                Become a Member
-                <svg
-                  className="ml-2 w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </motion.button>
+              <div className="flex justify-center items-center gap-4">
+                {socialMedia.map((social) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="p-2 bg-blue-500/20 hover:bg-blue-500/30 transition-colors rounded-lg text-blue-300 flex items-center justify-center"
+                  >
+                    <img src={`/social/${social.name}.svg`} alt={social.name}
+                      width={40}
+                      height={40}
+                    />
+
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </motion.div>
         </motion.div>

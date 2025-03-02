@@ -107,7 +107,7 @@ export const Office = () => {
                                     href={selectedPerson.socials.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-blue-600"
+                                    className="text-blue-600 hover:scale-110"
                                 >
                                     <img src="/social/linkedin.svg" height={24} width={24} />
                                 </a>
@@ -117,7 +117,7 @@ export const Office = () => {
                                     href={selectedPerson.socials.x}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#f2f2e6]"
+                                    className="text-[#f2f2e6] hover:scale-110"
                                 >
                                     <img src="/social/x.svg" width={24} height={24} />
                                 </a>
@@ -127,7 +127,7 @@ export const Office = () => {
                                     href={selectedPerson.socials.email}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#1B1B23]"
+                                    className="text-[#1B1B23] hover:scale-110"
                                 >
                                     <img src="/social/mail.svg" width={24} height={24} />
                                 </a>
@@ -137,7 +137,7 @@ export const Office = () => {
                                     href={selectedPerson.socials.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#F2F2E6]"
+                                    className="text-[#F2F2E6] hover:scale-110"
                                 >
                                     <img src="/social/github.svg" height={24} width={24} />
                                 </a>
@@ -148,10 +148,24 @@ export const Office = () => {
                                     href={selectedPerson.socials.instagram}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-blue-600"
+                                    className="text-blue-600 hover:scale-110"
                                 >
                                     <img src="/social/insta.svg" width={24} height={24} />
                                 </a>
+                            )}
+
+                            {selectedPerson.socials?.gscholar && (
+                                <a
+                                href={selectedPerson.socials.gscholar}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#f2f2e6] hover:scale-125"
+                                style={{ transform: "scale(1.2)" }}
+                              >
+                                <img src="/social/gscholar.svg" width={24} height={24} />
+                              </a>
+                              
+                              
                             )}
                         </div>
                     </div>

@@ -113,11 +113,11 @@ const Hero = () => {
 
           <div className=" flex items-center justify-center md:w-1/2 w-[60vw] h-full">
             <Image
-              src="/acm_icon.svg"
+              src="/acm_large2.svg"
               alt="ACM Logo"
               width={65}
               height={65}
-              className=" md:w-3/4 md:h-3/4 w-full h-full "
+              className="scale-125 md:w-3/4 md:h-3/4 w-full h-full "
               
             />
           </div>

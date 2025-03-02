@@ -34,7 +34,7 @@ export const NavBar = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-[#28242c]/60 backdrop-blur-sm h-16 p-2 xl:px-6 flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <Image src="/acm_icon.svg" height={50} width={50} alt="ACM Icon" />
+        <Image src="/acm_large2.svg" height={50} width={50} alt="ACM Icon" />
         <div className="flex items-center space-x-2">
           <h3 className="text-[#00C0FF] font-bold max-md:text-xl text-2xl">
             ACM
@@ -81,8 +81,16 @@ export const NavBar = () => {
             </Link>
           </li>
           <li className="cursor-pointer px-2 py-1">
-            <Link to="Teams" spy smooth offset={-70} duration={500} onClick={closeNav}>
-              Team
+            <Link
+              activeClass="active"
+              to="office"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <span aria-hidden="true" className="md:hidden">02</span> Team
+
             </Link>
           </li>
           <li className="cursor-pointer md:bg-[#8097FF] md:bg-opacity-41 px-2 py-1 rounded-lg">
