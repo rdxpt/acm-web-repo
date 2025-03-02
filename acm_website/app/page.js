@@ -1,5 +1,6 @@
 "use client";
 import { Element } from "react-scroll";
+import Background from "./components/Background";
 import Carousel from "./components/carousel";
 import Event from "./components/Events"; // Keep this import unchanged
 import Footer from "./components/Footer";
