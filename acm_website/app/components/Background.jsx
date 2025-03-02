@@ -41,7 +41,7 @@ export default function Background() {
             setFloatOffset1Y(Math.cos(t / 21) * 10);
             setFloatOffset2X(Math.cos(t / 37) * 60);
             setFloatOffset2Y(Math.sin(t / 60) * 60);
-            
+
             t += window.innerWidth <= 425 ? 0.3 : 1.25;
 
             requestAnimationFrame(animateFloat);
@@ -61,6 +61,7 @@ export default function Background() {
                 h: (window.innerHeight <= 425) ? 20 * window.innerWidth : 0.85 * window.innerWidth,
                 bottom: (window.innerWidth <= 425) ? -0.1 * window.innerHeight : -0.8 * window.innerHeight,
             });
+            console.log(window.innerWidth, windowSize.w);
         };
 
         window.addEventListener("resize", handleResize);
