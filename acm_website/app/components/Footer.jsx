@@ -58,7 +58,7 @@ const Footer = () => {
           <Image src="/acm_large2.svg" alt="ACM Logo" width={400} height={400} className="block scale-125" />
           <div className="flex gap-6 justify-center items-center">
             {socialMedia.map(({ name, url }) => (
-              <a key={name} href={url} target="_blank" rel="noopener noreferrer" className="transition-transform transform hover:scale-110">
+              <a key={name} href={url} tarx="_blank" rel="noopener noreferrer" className="transition-transform transform hover:scale-110">
                 <Image src={`/social/${name}.svg`} alt={name} width={40} height={40} />
               </a>
             ))}
