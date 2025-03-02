@@ -100,7 +100,7 @@ export const Office = () => {
                             {selectedPerson.designation}
                         </h3>
 
-                        <p className="mt-2 italic">"{selectedPerson.message}"</p>
+                        <p className="mt-2 italic">&quot;{selectedPerson.message}&quot;</p>
                         <div className="mt-4 flex gap-4 justify-center">
                             {selectedPerson.socials?.linkedin && (
                                 <a

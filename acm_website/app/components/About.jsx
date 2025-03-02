@@ -116,7 +116,7 @@ const About = () => {
               </h3>
 
               <div className="space-y-4 text-justify text-gray-300 md:text-md">
-                <p> ACM unites computing educators, researchers, and professionals to foster dialogue, share resources, and tackle industry challenges. As the world's largest computing society, we advocate for excellence, leadership, and technical innovation. </p>
+                <p> ACM unites computing educators, researchers, and professionals to foster dialogue, share resources, and tackle industry challenges. As the world&apos;s largest computing society, we advocate for excellence, leadership, and technical innovation. </p>
                 <p> The USAR ACM Student Chapter empowers students with technical skills and networking opportunities. We connect members with top recruiters, engineers, and industry leaders through events and expert talks, helping them stay ahead in tech and career growth. Join us to learn, connect, and thrive in a dynamic community of computing enthusiasts. </p>
               </div>
 
