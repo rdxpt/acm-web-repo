@@ -65,7 +65,7 @@ export const NavBar = () => {
       {/* Navigation Menu */}
       <nav
         id="primary-navigation"
-        className={`primary-navigation text-white md:gap-8 font-normal max-md:text-lg text-xl transition-transform duration-300 ease-in-out ${
+        className={`primary-navigation text-white md:gap-4 font-normal max-md:text-lg text-xl transition-transform duration-300 ease-in-out ${
           navVisible ? "translate-x-0" : "translate-x-full"
         } md:translate-x-0`}
       >
