@@ -7,9 +7,13 @@ export default function Background() {
     const [floatOffset1Y, setFloatOffset1Y] = useState(0);
     const [floatOffset2X, setFloatOffset2X] = useState(0);
     const [floatOffset2Y, setFloatOffset2Y] = useState(0);
+
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight,
+        w: (window.innerWidth <= 425) ? 3 * window.innerWidth : 0.6 * window.innerWidth,
+        h: (window.innerHeight <= 425) ? 3 * window.innerWidth : 0.85 * window.innerWidth,
+        bottom: (window.innerWidth <= 425) ? -0.1 * window.innerHeight : -0.8 * window.innerHeight,
     });
 
     useEffect(() => {
@@ -22,11 +26,29 @@ export default function Background() {
     useEffect(() => {
         let t = 0;
         const animateFloat = () => {
+            // if (window.innerWidth <= 425) {
+            //     setFloatOffset1X(Math.sin(t / 60) * 10);
+            //     setFloatOffset1Y(Math.cos(t / 21) * 10);
+            //     setFloatOffset2X(Math.cos(t / 37) * 30);
+            //     setFloatOffset2Y(Math.sin(t / 60) * 60);
+            // }
+            // else {
+            //     setFloatOffset1X(Math.sin(t / 60) * 30);
+            //     setFloatOffset1Y(Math.cos(t / 21) * 10);
+            //     setFloatOffset2X(Math.cos(t / 37) * 60);
+            //     setFloatOffset2Y(Math.sin(t / 60) * 60);
+            // }
+            // t += 1.25;
             setFloatOffset1X(Math.sin(t / 60) * 30);
             setFloatOffset1Y(Math.cos(t / 21) * 10);
             setFloatOffset2X(Math.cos(t / 37) * 60);
             setFloatOffset2Y(Math.sin(t / 60) * 60);
+            if (window.innerWidth <= 425) {
+            t += 0.3;
+            }
+            else {
             t += 1.25;
+            }
             requestAnimationFrame(animateFloat);
         };
 
@@ -38,7 +60,12 @@ export default function Background() {
             setWindowSize({
                 width: window.innerWidth,
                 height: window.innerHeight,
+                w: (window.innerWidth <= 425) ? 20 * window.innerWidth : 0.6 * window.innerWidth,
+                h: (window.innerHeight <= 425) ? 20 * window.innerWidth : 0.85 * window.innerWidth,
+                bottom: (window.innerWidth <= 425) ? -0.1 * window.innerHeight : -0.8 * window.innerHeight,
             });
+            console.log(window.innerWidth, windowSize.w);
+            
         };
 
         window.addEventListener("resize", handleResize);
@@ -61,32 +88,33 @@ export default function Background() {
 
     const translateY = -(((scrollY + 2*windowSize.height) % (4 * window.innerHeight)) - (2 * window.innerHeight));
     const translateY1 = -(((scrollY * 1.8 + 5*windowSize.height) % (10 * window.innerHeight)) - (5 * window.innerHeight));
+
     return (
         <div className="fixed inset-0 z-[-1] w-full h-full bg-[#232227]">
             {/* <div className="absolute w-full h-full z-[-2] w-full h-full bg-[#1B1B23] brightness-[1.1] contrast-[0.97] sepia-[0.2]"/> */}
             <img
-                src="/ellipse10.png"
+                src="/eclipse10.png"
                 alt="Background"
                 className="absolute"
                 style={{
-                    height: 1.2 * windowSize.height,
-                    width: 0.6 * windowSize.width,
-                    bottom: -0.8 * windowSize.height,
+                    height: windowSize.h,
+                    width: windowSize.w,
+                    bottom: windowSize.bottom,
                     right: 0.55 * windowSize.width,
                     transform: `translateY(${translateY1 + floatOffset1Y}px)
             translateX(${floatOffset1X}px)`,
                 }}
             />
             <img
-                src="/ellipse10.png"
+                src="/eclipse10.png"
                 alt="Background"
                 className="absolute"
                 style={{
-                    height: 1.2 * windowSize.height,
-                    width: 0.6 * windowSize.width,
+                    height: windowSize.h,
+                    width: windowSize.w,
                     left: 0.45 * windowSize.width,
                     transform: `translateY(${translateY + floatOffset2Y}px)
-            translateX(${floatOffset2X}px)`,
+                    translateX(${floatOffset2X}px)`
                 }}
             />
             {/* <div className="absolute bottom-[-70vh] left-[-40vh] w-[100vh] h-[120vh] "

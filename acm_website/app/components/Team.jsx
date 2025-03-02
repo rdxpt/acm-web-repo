@@ -33,7 +33,7 @@ export const Team = () => {
             {teamMembers.map((team, index) => (
               <div
                 key={index}
-                className={`w-full text-center text-[#F2F2E6] rounded-[22px] flex items-center justify-center cursor-pointer transition-all 
+                className={`w-full text-center text-[#F2F2E6] rounded-[1rem] flex items-center justify-center cursor-pointer transition-all 
                             ${
                               selectedTeam.name === team.name
                                 ? "border-animate"

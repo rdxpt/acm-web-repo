@@ -104,18 +104,9 @@ const About = () => {
                 The Association for Computing Machinery
               </h3>
 
-              <div className="space-y-4 text-justify text-gray-300">
-                <p>
-                  ACM brings together computing educators, researchers, and
-                  professionals to inspire dialogue, share resources, and
-                  address the field's challenges. As the world's largest
-                  computing society, we strengthen the profession's collective
-                  voice through strong leadership, promotion of the highest
-                  standards, and recognition of technical excellence.
-                </p>
-                <p>
-                  At the USAR ACM Student Chapter, we believe in empowering students to become successful computing professionals. We offer a robust program focused on both technical skill development and professional networking. Our networking events open doors to recruiters, engineers, and leaders from top tech companies, while guest lectures from industry experts provide invaluable insights into the latest trends and career strategies. Whether you're looking to sharpen your technical expertise, explore cutting-edge technologies, or expand your professional network, we are here to support your journey. Join us to connect, learn, and grow with a passionate community of tech enthusiasts
-                </p>
+              <div className="space-y-4 text-justify text-gray-300 md:text-md">
+              <p> ACM unites computing educators, researchers, and professionals to foster dialogue, share resources, and tackle industry challenges. As the world's largest computing society, we advocate for excellence, leadership, and technical innovation. </p> 
+              <p> The USAR ACM Student Chapter empowers students with technical skills and networking opportunities. We connect members with top recruiters, engineers, and industry leaders through events and expert talks, helping them stay ahead in tech and career growth. Join us to learn, connect, and thrive in a dynamic community of computing enthusiasts. </p>
               </div>
 
               <div className="flex flex-wrap gap-2 mt-8 mb-8">
