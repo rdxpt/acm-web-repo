@@ -89,7 +89,7 @@ export const NavBar = () => {
               offset={-70}
               duration={500}
             >
-              <span aria-hidden="true" className="md:hidden">02</span> Team
+              Team
 
             </Link>
           </li>
