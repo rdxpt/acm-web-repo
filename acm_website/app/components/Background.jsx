@@ -59,10 +59,11 @@ export default function Background() {
      */
 
 
-    const translateY = -(((scrollY + windowSize.height) % (2.375 * window.innerHeight)) - (1 * window.innerHeight));
-    const translateY1 = -(((scrollY * 0.8 + windowSize.height) % (2.375 * window.innerHeight)) - (1 * window.innerHeight));
+    const translateY = -(((scrollY + 2*windowSize.height) % (4 * window.innerHeight)) - (2 * window.innerHeight));
+    const translateY1 = -(((scrollY * 1.8 + 5*windowSize.height) % (10 * window.innerHeight)) - (5 * window.innerHeight));
     return (
-        <div className="fixed inset-0 z-[-1] w-full h-full bg-black">
+        <div className="fixed inset-0 z-[-1] w-full h-full bg-[#232227]">
+            {/* <div className="absolute w-full h-full z-[-2] w-full h-full bg-[#1B1B23] brightness-[1.1] contrast-[0.97] sepia-[0.2]"/> */}
             <img
                 src="/ellipse10.png"
                 alt="Background"
