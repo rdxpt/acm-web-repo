@@ -99,7 +99,7 @@ export const teamMembers = [
           }
         },
         {
-          img: "/ts/302.jpg",
+          img: "/ts/302.png",
           id:302,
           socials: {
             instagram: "https://instagram.com/member2",
@@ -108,11 +108,11 @@ export const teamMembers = [
           }
         },
         {
-          img: "/ts/303.jpg",
+          img: "/ts/303.jpeg",
           id:303,
           socials: {
-            instagram: "https://instagram.com/member3",
-            linkedin: "https://linkedin.com/in/member3",
+            instagram: "https://www.instagram.com/shanvigulia?igsh=MW0wbDJ1YjMyZnhtYg%3D%3D&utm_source=qr",
+            linkedin: "https://www.linkedin.com/in/shanvi-gulia-7912a9275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
             github: "https://github.com/member3"
           }
         },
@@ -272,7 +272,7 @@ export const teamMembers = [
           }
         },
         {
-          img: "/ts/402.jpg",
+          img: "/ts/402.png",
           id:402,
           socials: {
             instagram: "https://instagram.com/member2",
