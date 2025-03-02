@@ -175,20 +175,73 @@ header {
 
 @media (max-width: 40rem) {
   .primary-navigation {
-    gap: var(--gap, 1rem);
+    --gap: 3em;
+    gap: var(--gap, 1.8rem);
+    color: #D1D5DB; /* Softer, modern grayish-white for better readability */
     z-index: 1000;
-    --gap: 2em;
     position: fixed;
     font-weight: 700;
     height: 100vh;
     flex-direction: column;
-    inset: 0 0 0 30%;
-    padding: min(30vh, 10rem) 3rem;
-    background: hsl(0 0% 100% / 0.2);
-    backdrop-filter: blur(0.75rem);
-    transform: translateX(100%);
+    inset: 0 0 0 20%;
+    padding: min(35vh, 10rem) 3rem;
+
+    background: rgba(40, 36, 44, .95); /* bg-[#28242c] with slight transparency */
+    backdrop-filter: blur(10px) saturate(120%); /* Smooth glassy effect */
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+
     transition: transform 350ms ease-out;
-  }
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.15rem;
+}
+
+/* Enhancing visibility of links */
+.primary-navigation a {
+    color: #D1D5DB; /* Slightly off-white for a warm aesthetic */
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: block;
+    padding: 1.3rem 0;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    position: relative;
+}
+
+/* Underline effect - stays even after clicking */
+.primary-navigation a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(209, 213, 219, 0.6), rgba(209, 213, 219, 0.9));
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* Hover & focus effect */
+.primary-navigation a:hover,
+.primary-navigation a:focus {
+    color: #FFFFFF; /* Brighter white on hover */
+    transform: translateX(6px);
+}
+
+/* Ensure underline effect persists after clicking */
+.primary-navigation a.active::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Ensure the link remains highlighted after navbar closes */
+.primary-navigation a.active {
+    color: #FFFFFF;
+    font-weight: 800;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
 
   .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
@@ -198,7 +251,7 @@ header {
     display: block;
     position: absolute;
     background: url("/menu.svg");
-    width: 2rem;
+    width: 1.5rem;
     background-repeat: no-repeat;
     aspect-ratio: 1;
     top: 1.5rem;

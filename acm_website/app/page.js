@@ -39,7 +39,7 @@ export default function Home() {
         <Office />
       </Element>
 
-      <Element name="TeamS" className="">
+      <Element name="Teams" className="">
         <Team />
       </Element>
 
