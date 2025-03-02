@@ -24,9 +24,9 @@ export default function Background() {
         const animateFloat = () => {
             setFloatOffset1X(Math.sin(t / 60) * 30);
             setFloatOffset1Y(Math.cos(t / 21) * 10);
-            setFloatOffset2X(Math.cos(t / 37) * 40);
+            setFloatOffset2X(Math.cos(t / 37) * 60);
             setFloatOffset2Y(Math.sin(t / 60) * 60);
-            t += 1.75;
+            t += 1.25;
             requestAnimationFrame(animateFloat);
         };
 
@@ -54,6 +54,8 @@ export default function Background() {
      * rotation? in animation
      * team nav link not working
      * image compression
+     * client server rendering?
+     * performance?
      */
 
 
@@ -66,8 +68,8 @@ export default function Background() {
                 alt="Background"
                 className="absolute"
                 style={{
-                    height: 1.3 * windowSize.height,
-                    width: 0.75 * windowSize.width,
+                    height: 1.2 * windowSize.height,
+                    width: 0.6 * windowSize.width,
                     bottom: -0.8 * windowSize.height,
                     right: 0.55 * windowSize.width,
                     transform: `translateY(${translateY1 + floatOffset1Y}px)
@@ -79,9 +81,9 @@ export default function Background() {
                 alt="Background"
                 className="absolute"
                 style={{
-                    height: 1.3 * windowSize.height,
-                    width: 0.75 * windowSize.width,
-                    left: 0.35 * windowSize.width,
+                    height: 1.2 * windowSize.height,
+                    width: 0.6 * windowSize.width,
+                    left: 0.45 * windowSize.width,
                     transform: `translateY(${translateY + floatOffset2Y}px)
             translateX(${floatOffset2X}px)`,
                 }}
