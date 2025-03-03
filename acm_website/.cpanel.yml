@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/example/public_html/
+    - /bin/cp -R acm_website/.next $DEPLOYPATH
+    - /bin/cp -R acm_website/public $DEPLOYPATH
+    - /bin/cp -R acm_website/package.json $DEPLOYPATH
+    - /bin/cp -R acm_website/package-lock.json $DEPLOYPATH
+    - cd $DEPLOYPATH && npm install --production
