@@ -1,0 +1,19 @@
+# Ignore local node_modules (we install fresh ones in Docker)
+node_modules
+
+# Ignore log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore build output directories (Next.js will build inside Docker)
+.next
+out
+
+# Ignore environment variable files (adjust as needed)
+.env
+.env.*.local
+
+# Ignore git files
+.git
+.gitignore
