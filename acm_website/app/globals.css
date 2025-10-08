@@ -267,3 +267,110 @@ header {
 }
 
 /* ------ */
+
+/* Current Background */
+.bubbles1, .bubbles2 {
+  position: absolute;
+  width: 60vw;
+  height: 85vw;
+}
+.bubbles1 {
+  bottom: -100vh;
+  right: 55vw;
+  transform: translateX(var(--float1x)) translateY(calc(var(--float1y) + var(--scroll1y)));
+}
+.bubbles2 {
+  left: 45vw;
+  transform: translateX(var(--float2x)) translateY(calc(var(--float2y) + var(--scroll2y)));
+}
+@media (max-width: 425px) {
+  .bubbles1, .bubbles2 {
+    height: 100vw;
+    width: 100vw;
+  }
+  .bubbles1 {
+    bottom: -10vh;
+  }
+}
+
+/* End Current Background*/
+
+/* Background for future reference only*/
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(20px) translateX(-30px);
+  }
+  50% {
+    transform: translateY(-15px) translateX(25px);
+  }
+  75% {
+    transform: translateY(10px) translateX(40px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes parallax {
+  to {
+    /* Move the element up by 80% of the viewport height as you scroll down */
+    transform: translateY(-80vh);
+  }
+}
+
+.bubble {
+  position: absolute;
+  background-image: url('/eclipse10.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bubble1 {
+  /* Sizing and Positioning */
+  width: 60vw;
+  height: 85vw;
+  max-width: 800px; /* Add max-widths to prevent them from getting huge */
+  max-height: 1100px;
+  bottom: -80vh;
+  left: -20vw;
+
+  /* --- Parallax Scroll Animation --- */
+  /* This animation is driven by the user scrolling the page */
+  animation-timeline: scroll(root);
+  animation-name: parallax;
+}
+
+.bubble2 {
+  /* Sizing and Positioning */
+  width: 60vw;
+  height: 85vw;
+  max-width: 800px;
+  max-height: 1100px;
+  bottom: -50vh;
+  right: -20vw;
+  
+
+  /* --- Parallax Scroll Animation --- */
+  animation-timeline: scroll(root);
+  animation-name: parallax;
+  animation-range-start: 0;
+  animation-range-end: 200vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 425px) {
+  .bubble1, .bubble2 {
+    width: 120vw;
+    height: 150vw;
+  }
+  .bubble1 {
+    left: -50vw;
+  }
+  .bubble2 {
+    right: -50vw;
+  }
+}
+/* End Background */

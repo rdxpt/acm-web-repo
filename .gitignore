@@ -1,0 +1,41 @@
+# Node.js stuff (applies to subfolders)
+acm_website/node_modules/
+acm_website/*.log
+acm_website/.env
+
+#OS stuff
+acm_website/.DS_Store
+.DS_Store
+.cpanel.yml
+
+
+
+# Node modules
+acm_website/node_modules/
+acm_website/
+
+# Logs
+acm_website/npm-debug.log*
+acm_website/yarn-debug.log*
+acm_website/yarn-error.log*
+acm_website/
+
+# Environment files
+acm_website/.env
+acm_website/.env.local
+acm_website/.env.*.local
+acm_website/
+
+# Next.js build output
+acm_website/.next/
+acm_website/out/
+acm_website/dist/
+acm_website/build
+
+# Optional: Docker build files
+acm_website/docker-compose.override.yml
+acm_website/
+
+# Miscellaneous
+acm_website/.DS_Store
+acm_website/*.log
